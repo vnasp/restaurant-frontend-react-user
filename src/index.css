@@ -43,7 +43,7 @@ a {
 }
 
 .header-custom-background {
-  background-image: url("/background.jpg");
+  background-image: url("/assets/img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
@@ -147,7 +147,7 @@ a {
 }
 
 #footer {
-  background-image: url("/background-footer.jpg");
+  background-image: url("/assets/img/background-footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;

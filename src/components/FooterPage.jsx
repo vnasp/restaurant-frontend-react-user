@@ -24,7 +24,7 @@ const FooterPage = () => {
               <OpeningHours />
             </Col>
             <Col className="col-md-2 d-flex flex-column justify-content-start align-items-center">
-              <Image src="/logo_white.png" width={100} className="mb-4" />
+              <Image src="/assets/img/logo_white.png" width={100} className="mb-4" />
               <SocialMedia />
               <div className="pt-5">
                 <div className="text-white mb-4"><span className="badge py-1 px-2 me-2">UX/UI</span> Natalia Muñoz</div>

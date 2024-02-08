@@ -61,7 +61,7 @@ const Navigation = () => {
               </Navbar.Offcanvas>
             </div>
             <div className="position-absolute top-50 start-50 translate-middle">
-              <Navbar.Brand href="#" className="mx-auto"><Image src="/logo_white.png" width={180} /></Navbar.Brand>
+              <Navbar.Brand href="#" className="mx-auto"><Image src="/assets/img/logo_white.png" width={180} /></Navbar.Brand>
             </div>
             <div className="d-flex justify-content-end">
               <div className="fs-1">
