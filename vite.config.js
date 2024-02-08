@@ -1,10 +1,8 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import dotenv from 'dotenv';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-dotenv.config();
-
+// vite.config.js
 export default defineConfig({
-  base: process.env.VITE_BASE_URL || '/',
+  base: '/restaurant-frontend-react-user/',
   plugins: [react()]
 });
