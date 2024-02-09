@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Agua Mineral",
+    "img": "",
+    "desc": "Agua mineral natural de vertiente natural, servida fría, con o sin gas.",
+    "price": 1990
+  },
+  {
+    "id": 2,
+    "name": "Limonada Clásica",
+    "img": "",
+    "desc": "Limonada recién preparada con jugo de limón fresco, azúcar y agua.",
+    "price": 3490
+  },
+  {
+    "id": 3,
+    "name": "Té Helado",
+    "img": "",
+    "desc": "Té negro helado, servido con limón y una cantidad opcional de azúcar.",
+    "price": 2490
+  },
+  {
+    "id": 4,
+    "name": "Cerveza Artesanal",
+    "img": "",
+    "desc": "Cervezas artesanal tipo Lager, servida fria.",
+    "price": 4990
+  }
+]

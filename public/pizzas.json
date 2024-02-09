@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "desc": "La Pizza Napolitana es un tributo a los sabores simples pero profundos de Italia, con una base de tomate fresco, mozzarella de búfala, aceitunas negras y anchoas, todo adornado con hojas de albahaca fresca. Su borde ligeramente carbonizado y su centro tierno evocan la autenticidad del horno de leña napolitano. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
+    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_cl.jpg?alt=media&token=6a9a33da-5c00-49d4-9080-784dcc87ec2c",
+    "ingredients": ["tomate","mozzarella", "aceitunas", "albahaca", "aceite de oliva"],
+    "name": "napolitana",
+    "price": 5950
+  },
+  {
+    "id": 2,
+    "desc": "Nuestra Pizza Española fusiona la riqueza de la cocina mediterránea, destacando ingredientes como el chorizo picante, pimientos rojos asados, cebolla caramelizada y aceitunas, sobre una generosa capa de mozzarella. Es una obra maestra culinaria que invita a un viaje de sabores intensos y texturas contrastantes. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
+    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fcheese-164872_640_com.jpg?alt=media&token=18b2b821-4d0d-43f2-a1c6-8c57bc388fab",
+    "ingredients": ["tomate", "mozzarella", "chorizo", "pimiento rojo", "aceitunas"],
+    "name": "española",
+    "price": 7250
+  },
+  {
+    "id": 3,
+    "desc": "La Pizza de Salame ofrece una explosión de sabor con cada bocado, gracias a rodajas de salame italiano de primera calidad, mozzarella fundida y un toque de orégano sobre nuestra inigualable salsa de tomate. Perfecta para los amantes de los sabores tradicionales con un toque gourmet. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
+    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_com.jpg?alt=media&token=e7cde87a-08d5-4040-ac54-90f6c31eb3e3",
+    "ingredients": ["tomate", "mozzarella", "salame", "aceitunas", "orégano"],
+    "name": "salame",
+    "price": 5990
+  },
+  {
+    "id": 4,
+    "desc": "La Cuatro Estaciones es una pizza que celebra la diversidad, dividiéndose en cuartos para representar las estaciones del año con ingredientes seleccionados: alcachofas tiernas, jamón serrano, champiñones frescos y olivas negras. Una mozzarella suave une este mosaico de sabores en perfecta armonía. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
+    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be",
+    "ingredients": ["tomate", "mozzarella", "alcachofas", "jamón", "champiñones"],
+    "name": "cuatro estaciones",
+    "price": 9590
+  },
+  {
+    "id": 5,
+    "desc": "Crujiente y deliciosa, nuestra Pizza de Bacon combina tiras de bacon ahumado, mozzarella de calidad, cebolla morada y champiñones sobre una salsa de tomate ligeramente especiada. Es la elección perfecta para quienes buscan un sabor intenso y satisfactorio. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
+    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-salame.jpg?alt=media&token=ab3d4bf8-01f2-4810-982b-bd7fb6b517b2",
+    "ingredients": ["tomate", "mozarella", "bacon", "cebolla","champiñones"],
+    "name": "bacon",
+    "price": 6450
+  },
+  {
+    "id": 6,
+    "desc": "La Pizza de Pollo Picante lleva el sabor al límite con su combinación de pollo marinado en especias, pimientos jalapeños, cebolla, y una base de mozzarella y salsa de tomate casera. Cada rebanada ofrece un equilibrio perfecto entre picante y delicioso. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
+    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be",
+    "ingredients": ["tomate", "mozzarella", "pollo", "jalapeños", "cebolla"],
+    "name": "pollo picante",
+    "price": 8500
+  },
+  {
+    "id": 7,
+    "desc": "Nuestra Pizza Vegetariana es un homenaje a los sabores del jardín, con una colorida mezcla de pimientos, cebollas, champiñones, alcachofas y tomates cherry, todo sobre una base de mozzarella y salsa de tomate. Es una opción fresca, ligera y rebosante de sabor. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
+    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be",
+    "ingredients": ["tomate", "mozzarella", "pimientos", "champiñones", "aceitunas"],
+    "name": "vegetariana",
+    "price": 8500
+  },
+  {
+    "id": 8,
+    "desc": "Elegante en su simplicidad, la Pizza Bianca prescinde de la salsa de tomate para dar protagonismo a una base de ricotta cremosa, mozzarella, ajo y un toque de aceite de oliva extra virgen. Finalizada con una pizca de sal marina y romero fresco, es una experiencia culinaria sublime y suave. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
+    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be",
+    "ingredients": ["mozzarella", "ricotta", "ajo", "aceite de oliva", "champiñones"],
+    "name": "bianca",
+    "price": 8500
+  }
+]
