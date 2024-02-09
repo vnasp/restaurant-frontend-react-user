@@ -1,21 +1,21 @@
 const OpeningHours = () => {
   return (
-    <div className="d-flex flex-column text-white">
-      <div className="mb-2"><h4>Horario de atención</h4></div>
-      <div className="text-uppercase">
+    <div className="d-flex flex-column text-white mb-4">
+      <div className="mb-2"><h4>Nuestro horario de atención</h4></div>
+      <div>
         <div className="mb-4">
-          <div className="badge-green">
-            Lunes - Viernes
+          <div className="text-capitalize">
+            Lunes a Viernes
           </div>
           <div>
-            11:30 AM a 10:00 PM
+            11:30 am a 10:00 pm
           </div>
         </div>
-        <div className="badge-green">
-          Viernes - Sábado
+        <div className="text-capitalize">
+          Viernes a Sábado
         </div>
         <div>
-          11:30 AM a 11:00 PM
+          11:30 am a 11:00 pm
         </div>
       </div>
     </div>

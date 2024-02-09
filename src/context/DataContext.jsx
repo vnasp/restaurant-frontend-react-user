@@ -14,7 +14,7 @@ const DataProvider = ({ children }) => {
   const getPizzas = async () => {
     try {
       const response = await fetch("/pizzas.json")
-      if (!response.ok) { 
+      if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const data = await response.json()
@@ -31,7 +31,7 @@ const DataProvider = ({ children }) => {
   const getSideDishes = async () => {
     try {
       const response = await fetch("/sidedishes.json")
-      if (!response.ok) { 
+      if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const data = await response.json()
@@ -48,7 +48,7 @@ const DataProvider = ({ children }) => {
   const getBeverages = async () => {
     try {
       const response = await fetch("/beverages.json")
-      if (!response.ok) { 
+      if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const data = await response.json()
@@ -64,28 +64,35 @@ const DataProvider = ({ children }) => {
 
 
 
-  const addToCart = (e) => {
-    const pizzaIndex = pizzas.findIndex(pizza => {
-      return pizza.id === e.target.value
-    })
-    const cartIndex = cart.findIndex(cartpizza => {
-      return cartpizza.id === e.target.value
-    })
+  const addToCart = (item) => {
+    // Destructura el objeto item para obtener el id y el tipo
+    const { id, type } = item;
+
+    // Determina la lista de productos basada en el tipo
+    let productList;
+    if (type === 'pizza') {
+      productList = pizzas;
+    } else if (type === 'sidedish') {
+      productList = sideDishes;
+    } else if (type === 'beverage') {
+      productList = beverages;
+    }
+    const productIndex = productList.findIndex(product => product.id === id);
+    const cartIndex = cart.findIndex(cartItem => cartItem.id === id && cartItem.type === type);
 
     if (cartIndex < 0) {
+      // Agrega un nuevo producto al carrito si no está ya en él
       setCart([...cart, {
-        id: pizzas[pizzaIndex].id,
-        img: pizzas[pizzaIndex].img,
-        name: pizzas[pizzaIndex].name,
-        price: pizzas[pizzaIndex].price,
+        ...productList[productIndex],
         qty: 1,
-      }])
+        type, // Incluye el tipo de producto en el carrito
+      }]);
+    } else {
+      // Si el producto ya está en el carrito, solo incrementa la cantidad
+      let newCart = [...cart];
+      newCart[cartIndex].qty += 1;
+      setCart(newCart);
     }
-    else {
-      cart[cartIndex].qty += 1
-      setCart([...cart])
-    }
-
   }
 
   const cartFilter = cart.filter((item) => item.qty > 0)

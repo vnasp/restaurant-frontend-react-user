@@ -18,7 +18,7 @@ const FoodMenuBeverages = () => {
   return (
     <>
       <div id="beveragesMenu" className="py-4 my-4">
-        <h2 className="text-white fs-1 pb-4">Beverages Artesanales</h2>
+        <h2 className="text-white fs-1 pb-4">Bebestibles</h2>
         <Form onSubmit={handleSubmit}>
           <Row xs={1} md={2} lg={4} className="g-4">
             {beverages.map((beverage) => (
@@ -34,7 +34,7 @@ const FoodMenuBeverages = () => {
                   <Card.Body className="d-flex justify-content-between align-items-center">
                     <Card.Text className="fw-bolder fs-2 m-0">{CLP.format(beverage.price)}
                     </Card.Text>
-                    <Button className="btn secondary" type="button" value={beverage.id} onClick={(e) => addToCart(e, 'value')}><i className="bi bi-basket pe-2"></i> Agregar</Button>
+                    <Button className="btn secondary" type="button" value={beverage.id} onClick={() => addToCart({ id: beverage.id, type: 'beverage' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
                   </Card.Body>
 
                 </Card>

@@ -1,11 +1,13 @@
 :root {
   margin: 0;
+  width:100vw;
 }
 
 body {
   background-color: #df554e;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+  width:100vw;
 }
 
 h1 {
@@ -16,7 +18,7 @@ h1 {
 
 h2 {
   font-family: 'Satisfy', serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
 }
 
@@ -37,9 +39,25 @@ h6 {
   font-family: 'Yellowtail', serif;
 }
 
+h6 {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+}
 
 a {
   text-decoration: none;
+}
+
+.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10
+  }
+
+.header-custom-padding {
+  padding-top:160px;
 }
 
 .header-custom-background {
@@ -54,14 +72,20 @@ a {
   background-color: #df554e;
 }
 
-.offcanvas-custom-tittle {
+.menu-offcanvas-custom-tittle {
   display: flex;
   justify-content: center;
   align-items: start;
   position: relative;
 }
-
-.offcanvas-custom-tittle .btn-close {
+.cart-offcanvas-custom-tittle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+}
+.menu-offcanvas-custom-tittle .btn-close,
+.cart-offcanvas-custom-tittle .btn-close {
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -86,6 +110,18 @@ a {
   transform: rotate(-90deg);
   /* Rota el texto para que sea vertical */
   font-family: 'Satisfy', serif;
+}
+
+.accordion-button,
+.accordion-item,
+.accordion-button:not(.collapsed){
+  background-color: #252832 !important;
+  color: white !important;
+  font-family:'Lato', sans-serif;
+}
+
+.accordion .accordion-item .accordion-body.accordion-body-custom {
+  background-color: #252832 !important;
 }
 
 .btn {
@@ -163,10 +199,10 @@ a {
   border:2px solid;
 }
 
-#footer .badge {
+.badge-red {
   background-color: #df554e;
 }
-#footer .badge-green {
+.badge-green {
   background-color: #8bb449;
   padding: 0.5rem 1rem;
   margin-bottom:0.5rem;
@@ -193,7 +229,7 @@ a {
   right: 0;
   left: 0;
   width: 100%;
-  height: 8%;
+  height: 5%;
   background: #df554e;
   z-index: 0;
   transform: skewY(-1deg);
@@ -201,4 +237,59 @@ a {
 }
 .mt-custom {
   margin-top:6rem;
+}
+
+.contact-custom-background {
+  background-image: url("/assets/img/background-contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 330px;
+}
+.custom-margin-bottom{
+  margin-bottom:60px;
+}
+.custom-popup {
+  background-color:#df554e;
+  border-radius:20px;
+  color:white;
+}
+.custom-popup h2 {
+  font-size: 2rem;
+}
+
+.login-with-google-btn {
+  background-color: #4285F4; 
+  transition: background-color .3s, box-shadow .3s;
+  padding: 12px 16px 12px 42px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+  color: #757575;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+  
+  &:hover {
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+  }
+  
+  &:active {
+    background-color: #eeeeee;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 
+      0 -1px 0 rgba(0, 0, 0, .04),
+      0 2px 4px rgba(0, 0, 0, .25),
+      0 0 0 3px #c8dafc;
+  }
+}
+.row,
+.col {
+  padding-right:0!important;
 }

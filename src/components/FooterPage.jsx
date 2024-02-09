@@ -1,4 +1,5 @@
 import OpeningHours from "./OpeningHours"
+import CallUs from "./CallUs"
 import SocialMedia from "./SocialMedia"
 import { Row, Col, Image } from "react-bootstrap"
 import { Link } from "react-router-dom"
@@ -6,14 +7,15 @@ import { Link } from "react-router-dom"
 const FooterPage = () => {
   return (
     <>
-      <div className="position-relative">
+      <div className="position-relative mt-4">
         <div className="skewed-footer"></div>
-        <div id="footer" className="pt-5 mt-5">
+        <div id="footer">
           <Row className="pt-5 mt-5">
             <Col className="col-md-5">
             </Col>
             <Col className="col-md-2 text-white">
-              <div className="pb-2"><h4>Contacto</h4></div>
+            <CallUs/>
+              <div className="pb-2"><h4>Enlaces de ayuda</h4></div>
               <div className="d-flex flex-column justify-content-start">
                 <Link href="#" className="mb-2 text-white">Escríbenos</Link>
                 <Link href="#" className="mb-2 text-white">Trabaja con Nosotros</Link>
@@ -27,8 +29,8 @@ const FooterPage = () => {
               <Image src="/assets/img/logo_white.png" width={100} className="mb-4" />
               <SocialMedia />
               <div className="pt-5">
-                <div className="text-white mb-4"><span className="badge py-1 px-2 me-2">UX/UI</span> Natalia Muñoz</div>
-                <div className="text-white mb-2"><span className="badge py-1 px-2 me-2">FRONTEND</span> Valentina Muñoz</div>
+                <div className="text-white mb-4"><span className="badge-red p-1 me-2">UX/UI</span> Natalia Muñoz</div>
+                <div className="text-white mb-2"><span className="badge-red p-1 me-2">FRONTEND</span> Valentina Muñoz</div>
               </div>
             </Col>
           </Row>

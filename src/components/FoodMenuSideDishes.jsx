@@ -34,7 +34,7 @@ const FoodMenuSideDishes = () => {
                   <Card.Body className="d-flex justify-content-between align-items-center">
                     <Card.Text className="fw-bolder fs-2 m-0">{CLP.format(sidedish.price)}
                     </Card.Text>
-                    <Button className="btn secondary" type="button" value={sidedish.id} onClick={(e) => addToCart(e, 'value')}><i className="bi bi-basket pe-2"></i> Agregar</Button>
+                    <Button className="btn secondary" type="button" value={sidedish.id} onClick={() => addToCart({ id: sidedish.id, type: 'sidedish' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
                   </Card.Body>
 
                 </Card>
