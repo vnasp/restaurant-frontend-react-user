@@ -6,7 +6,7 @@ import { DataContext } from "../context/DataContext"
 
 const Navigation = () => {
   const { CLP, total } = useContext(DataContext)
-  const setActiveclassName = ({ isActive }) => (isActive ? "active" : undefined)
+  const setActiveclassName = ({ isActive }) => (isActive ? "active" : "inactive")
 
   return (
     <>
@@ -23,38 +23,37 @@ const Navigation = () => {
               >
                 <Offcanvas.Header closeButton className="offcanvas-custom-tittle">
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                    <Navbar.Brand href="/"><Image src="/logo_white.png" width={80} /></Navbar.Brand>
+                    <Navbar.Brand href="/"><Image src="/assets/img/logo_white.png" width={80} /></Navbar.Brand>
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className="d-flex flex-column justify-content-between ms-4">
                   <div className="watermark">MammaMia</div>
                   <Nav className="d-flex flex-column fs-4 text-white mb-5 pb-5">
-                    <Nav.Link to="/pizzas"
+                    <NavLink to="/pizzas"
                       className={setActiveclassName}
                     > <i className="bi bi-basket pe-3"></i> Pide Online
-                    </Nav.Link>
-                    <Nav.Link to="/pizzas"
+                    </NavLink>
+                    <NavLink to="/pizzas"
                       className={setActiveclassName}
                     > <i className="bi bi-book pe-3"></i> Menú
-                    </Nav.Link>
-
-                    <Nav.Link to="/sucursales"
+                    </NavLink>
+                    <NavLink to="/locales"
                       className={setActiveclassName}
                     > <i className="bi bi-shop pe-3"></i> Locales
-                    </Nav.Link>
+                    </NavLink>
 
-                    <Nav.Link to="/puntos"
+                    <NavLink to="/puntos"
                       className={setActiveclassName}
                     > <i className="bi bi-star pe-3"></i> MammaPuntos
-                    </Nav.Link>
-                    <Nav.Link to="/inscribete"
+                    </NavLink>
+                    <NavLink to="/inscribete"
                       className={setActiveclassName}
                     > <i className="bi bi-person pe-3"></i> Inscríbete
-                    </Nav.Link>
-                    <Nav.Link to="/sucursales"
+                    </NavLink>
+                    <NavLink to="/sucursales"
                       className={setActiveclassName}
                     > <i className="bi bi-telephone pe-3"></i> Contacto
-                    </Nav.Link>
+                    </NavLink>
                   </Nav>
                   <SocialMedia />
                 </Offcanvas.Body>

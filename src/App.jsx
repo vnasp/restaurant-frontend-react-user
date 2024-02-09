@@ -3,15 +3,18 @@ import HomePage from "./views/HomePage"
 import CartPage from "./views/CartPage"
 import PizzaPage from "./views/PizzaPage"
 import NotFound from "./views/NotFound"
-import HeaderPage from "./views/HeaderPage"
+import PointsPage from "./views/PointsPage"
+import RegisterPage from "./views/RegisterPage"
+import ContactPage from "./views/ContactPage"
+import StoresPage from "./views/StoresPage"
+import HeaderPage from "./components/HeaderPage"
 import FooterPage from "./components/FooterPage"
 import FoodMenu from "./components/FoodMenu"
-
 
 const App = () => {
   return (
     <div>
-      <HeaderPage/>
+      <HeaderPage />
       <Routes>
         <Route
           path="/"
@@ -24,6 +27,22 @@ const App = () => {
           element={<CartPage />}
         />
         <Route
+          path="/puntos"
+          element={<PointsPage />}
+        />
+        <Route
+          path="/contacto"
+          element={<ContactPage />}
+        />
+        <Route
+          path="/inscribete"
+          element={<RegisterPage />}
+        />
+        <Route
+          path="/locales"
+          element={<StoresPage />}
+        />
+        <Route
           path="/pizza/:id"
           element={<PizzaPage />}
         />
@@ -32,7 +51,7 @@ const App = () => {
           element={<NotFound />}
         />
       </Routes>
-      <FooterPage/>
+      <FooterPage />
     </div>
 
   );

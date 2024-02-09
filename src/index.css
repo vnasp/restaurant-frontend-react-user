@@ -129,9 +129,17 @@ a {
   padding-right:2rem;
 }
 
-.active-link {
-  color: orange;
+.active {
+  background-color: #7b2b3b61;
+  color: white;
+  border-radius: 10px;
   font-weight: 700;
+  padding: 5px 10px;
+}
+.inactive {
+  color: white;
+  font-weight: 700;
+  padding:5px 10px;
 }
 
 .card-bg-custom {

@@ -1,7 +1,7 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx"
-import { BrowserRouter } from "react-router-dom"
 import DataProvider from "./context/DataContext.jsx"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
