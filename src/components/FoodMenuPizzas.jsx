@@ -16,13 +16,13 @@ const FoodMenuPizzas = () => {
 
   return (
     <>
-      <div id="pizzasMenu" className="py-4 my-4">
+      <div id="pizzasMenu" className="py-4">
         <h2 className="text-white fs-1 pb-4">Pizzas Artesanales</h2>
         <Form onSubmit={handleSubmit}>
           <Row xs={1} md={2} lg={4} className="g-4">
             {pizzas.map((pizza) => (
               <Col key={pizza.id}>
-                <Card className="card-bg-custom text-white border-0 card-custom-shadow">
+                <Card className="card-custom text-white border-0 w">
                   <Card.Img variant="top" src={pizza.img} height={200} />
                 <Card.Body>
   <Card.Title className="text-capitalize"><h4>{pizza.name}</h4></Card.Title>

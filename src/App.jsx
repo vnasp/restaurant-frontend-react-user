@@ -51,7 +51,7 @@ const App = () => {
           element={<NotFound />}
         />
       </Routes>
-      <FooterPage className="mt-4"/>
+      <FooterPage />
     </div>
 
   );

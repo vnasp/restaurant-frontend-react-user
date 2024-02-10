@@ -1,11 +1,11 @@
-
-
+import FoodMenuSideDishes from "../components/FoodMenuSideDishes"
+import { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
-import { Container, Row, Col, Card, InputGroup, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, InputGroup, Form, Button } from 'react-bootstrap';
 
 const customIcon = L.icon({
   iconUrl: '/assets/img/iconLocation.png',
@@ -25,30 +25,36 @@ L.Icon.Default.mergeOptions({
 });
 
 const StoresPage = () => {
+  const [filterText, setFilterText] = useState('');
   const locations = [
     { id: 1, position: [-33.440593, -70.632206], message: "Mamma Mia Parque Bustamante" },
     { id: 2, position: [-33.440180, -70.643682], message: "Mamma Mia Cerro Santa Lucía" },
     { id: 3, position: [-33.418564, -70.631288], message: "Mamma Mia Cerro San Cristóbal" },
     { id: 4, position: [-33.462292, -70.657410], message: "Mamma Mia Paruque O'Higgins" }
   ]
+
+  const filteredLocations = locations.filter(location =>
+    location.message.toLowerCase().includes(filterText.toLowerCase())
+  );
  return (
     <Container className="custom-margin-bottom">
-      <Row className="card-bg-custom text-white card-custom-shadow rounded-3">
+      <Row className="card-custom text-white">
         <Col className="col-4">
               <div className="py-4">
               <InputGroup>
-                <Form.Control
-                  placeholder="Busca tu Mamma Mia"
-                  aria-label="Busca tu Mamma Mia"
-                  aria-describedby="basic-input-filter"
-                />
-                <Button variant="btn primary" id="button-addon2">
+              <Form.Control
+                placeholder="Busca tu Mamma Mia"
+                aria-label="Busca tu Mamma Mia"
+                aria-describedby="basic-input-filter"
+                onChange={(e) => setFilterText(e.target.value)} // Actualiza el estado con el texto ingresado
+              />
+                <Button variant="btn primary">
                   Filtrar
                 </Button>
               </InputGroup>
               </div>
           <div className="d-flex flex-column">
-            {locations.map((location) => (
+          {filteredLocations.map((location) => (
             <div className="py-2" key={location.id}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#df554e" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
@@ -56,7 +62,7 @@ const StoresPage = () => {
             ))}
           </div>
         </Col>
-        <Col className="col-8"> <MapContainer center={[-33.436746, -70.634436]} zoom={13} style={{ height: '500px', width: '100%' }}>
+        <Col className="col-8 pe-0"> <MapContainer center={[-33.436746, -70.634436]} zoom={13} style={{ height: '500px', width: '100%' }}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -69,6 +75,7 @@ const StoresPage = () => {
         </MapContainer></Col>
 
       </Row>
+    <FoodMenuSideDishes/>
     </Container>
   );
 }

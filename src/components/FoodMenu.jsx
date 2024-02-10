@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap"
 const FoodMenu = () => {
 
     return (
-      <Container className="pt-4 mt-4">
+      <Container>
       <FoodMenuPizzas/>
       <FoodMenuSideDishes/>
       <FoodMenuBeverages/>

@@ -5,13 +5,9 @@ import { useContext, useState } from "react"
 import { Container, Image, Nav, Navbar, Offcanvas, Button } from "react-bootstrap"
 import { NavLink, useLocation } from "react-router-dom"
 import { DataContext } from "../context/DataContext"
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
-
-const MySwal = withReactContent(Swal);
 
 const Navigation = () => {
-  const { CLP, cartFilter, total } = useContext(DataContext)
+  const { CLP, cartFilter, total, handleInscribeClick } = useContext(DataContext)
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -19,32 +15,6 @@ const Navigation = () => {
   const location = useLocation();
   const isHome = location.pathname === '/'
   const isCart = cartFilter.length > 0
-
-  const handleInscribeClick = (e) => {
-    e.preventDefault(); // Previene la navegación
-    MySwal.fire({
-      title: '<h2>Regístrate en Mamma Mia</h2>',
-      html: `
-        <p class="text-white">Acumula MammaPuntos y guarda todos tus pedidos.</p>
-        <button type="button" class="login-with-google-btn">Ingresa con Google</button>
-      `,
-      showConfirmButton: false,
-      showCancelButton: false,
-      focusConfirm: false,
-      customClass: {
-        popup: 'custom-popup' // Clase personalizada para el popup si necesitas más estilos
-      },
-      didRender: (element) => {
-        // Añade el manejador de eventos para el botón de Google después de renderizar la alerta
-        const loginBtn = element.querySelector('.login-with-google-btn');
-        loginBtn.addEventListener('click', () => {
-          // Aquí implementas la lógica para iniciar sesión con Google
-          console.log('Iniciar sesión con Google');
-        });
-      }
-    });
-
-  };
 
 
   return (
@@ -101,8 +71,11 @@ const Navigation = () => {
               <Navbar.Brand href="/" className="mx-auto"><Image src="/assets/img/logo_white.png" width={180} /></Navbar.Brand>
             </div>
             <div className="d-flex justify-content-end">
+
               <div className="fs-1">
-                <i className="bi bi-person-fill login-icon-custom"></i>
+                <a onClick={handleInscribeClick}>
+                  <i className="bi bi-person-fill login-icon-custom"></i>
+                </a>
               </div>
               <Button
                 onClick={handleShow}
@@ -116,7 +89,7 @@ const Navigation = () => {
           </Container>
         </Navbar>
       ))}
-      <Offcanvas show={show} onHide={handleClose} placement="end" className="card-bg-custom text-white p-4">
+      <Offcanvas show={show} onHide={handleClose} placement="end" className="card-custom text-white p-4">
         <Offcanvas.Header className="cart-offcanvas-custom-tittle" closeButton>
           <Offcanvas.Title className="fs-4">Tu Pedido</Offcanvas.Title>
         </Offcanvas.Header>

@@ -33,12 +33,12 @@ function ContactPage() {
 
   return (
     <Container className="custom-margin-bottom">
-      <Row className="card-bg-custom text-white card-custom-shadow rounded-3">
+      <Row className="card-custom text-whiterounded-3">
         <Col className="col-3 p-4">
           <CallUs/>
           <OpeningHours />
         </Col>
-        <Col className="col-6 p-4">
+        <Col className="col-6 py-4">
           <Card.Title><h2 className="fs-1">Escríbenos</h2></Card.Title>
           <Card.Body>
             <Form onSubmit={handleSubmit}>

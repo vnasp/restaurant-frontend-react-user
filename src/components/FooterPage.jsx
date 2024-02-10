@@ -17,9 +17,9 @@ const FooterPage = () => {
             <CallUs/>
               <div className="pb-2"><h4>Enlaces de ayuda</h4></div>
               <div className="d-flex flex-column justify-content-start">
-                <Link href="/contacto" className="mb-2 text-white">Escríbenos</Link>
-                <Link href="/contacto" className="mb-2 text-white">Trabaja con Nosotros</Link>
-                <Link href="/contacto" className="mb-2 text-white">Sugerencias</Link>
+                <Link to="/contacto" className="mb-2 text-white">Escríbenos</Link>
+                <Link to="/contacto" className="mb-2 text-white">Trabaja con Nosotros</Link>
+                <Link to="/contacto" className="mb-2 text-white">Sugerencias</Link>
               </div>
             </Col>
             <Col className="col-md-2">

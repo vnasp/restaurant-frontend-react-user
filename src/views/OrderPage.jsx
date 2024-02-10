@@ -1,7 +1,15 @@
+import { Container } from "react-bootstrap"
 
 const OrderPage = () => {
   return (
-    <div>OrderPage</div>
+    <Container>
+      <div className="card-custom text-white">
+<div className="p-4">
+Falta el esquema de Natalia
+</div>
+        
+      </div>
+    </Container>
   )
 }
 
