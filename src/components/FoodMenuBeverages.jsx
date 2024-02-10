@@ -24,7 +24,7 @@ const FoodMenuBeverages = () => {
             {beverages.map((beverage) => (
               <Col key={beverage.id}>
                 <Card className="card-bg-custom text-white border-0 card-custom-shadow">
-                  <Card.Img variant="top" src={beverage.img} />
+                  <Card.Img variant="top" src={beverage.img} height={200}/>
                   <Card.Body>
                     <Card.Title className="text-capitalize"><h4>{beverage.name}</h4></Card.Title>
                     <hr></hr>

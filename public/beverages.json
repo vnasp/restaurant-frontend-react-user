@@ -2,28 +2,28 @@
   {
     "id": 1,
     "name": "Agua Mineral",
-    "img": "",
+    "img": "https://cdn.brita.net/.imaging/opt/1635931228540/dam/jcr:8d98c900-95ef-4c90-a704-778073263a3e/brita_gastronomy_and_hotel_water_dispenser_for_restaurant_water_bottle_landscape.jpg",
     "desc": "Agua mineral natural de vertiente natural, servida fría, con o sin gas.",
     "price": 1990
   },
   {
     "id": 2,
     "name": "Limonada Clásica",
-    "img": "",
+    "img": "https://static.vecteezy.com/system/resources/previews/023/625/098/non_2x/lemonade-with-lemon-and-mint-in-a-glass-on-a-table-in-a-restaurant-ai-generative-free-photo.jpg",
     "desc": "Limonada recién preparada con jugo de limón fresco, azúcar y agua.",
     "price": 3490
   },
   {
     "id": 3,
     "name": "Té Helado",
-    "img": "",
+    "img": "https://img.freepik.com/premium-photo/glass-iced-tea-sits-table-restaurant_107062-3700.jpg",
     "desc": "Té negro helado, servido con limón y una cantidad opcional de azúcar.",
     "price": 2490
   },
   {
     "id": 4,
     "name": "Cerveza Artesanal",
-    "img": "",
+    "img": "https://media-cdn.tripadvisor.com/media/photo-s/0e/67/a0/87/our-home-brewed-wheat.jpg",
     "desc": "Cervezas artesanal tipo Lager, servida fria.",
     "price": 4990
   }

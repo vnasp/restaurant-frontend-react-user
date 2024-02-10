@@ -23,14 +23,16 @@ const FoodMenuPizzas = () => {
             {pizzas.map((pizza) => (
               <Col key={pizza.id}>
                 <Card className="card-bg-custom text-white border-0 card-custom-shadow">
-                  <Card.Img variant="top" src={pizza.img} />
-                  <Card.Body>
-                    <Card.Title className="text-capitalize"><h4>{pizza.name}</h4></Card.Title>
-                    <hr></hr>
-                    <div className="d-flex text-secondary text-capitalize"> 🍕 {pizza.ingredients.join(', ')}
-                    </div>
-                    <Button className="bg-secondary rounded-4 px-2 py-1 fs-6" type="submit" value={pizza.id} onClick={({ target }) => setPizzaSelected(target.value)}>Saber más</Button>
-                  </Card.Body>
+                  <Card.Img variant="top" src={pizza.img} height={200} />
+                <Card.Body>
+  <Card.Title className="text-capitalize"><h4>{pizza.name}</h4></Card.Title>
+  <hr></hr>
+  <div className="d-flex flex-wrap justify-content-between align-items-center text-secondary text-capitalize">
+    <div>🍕 {pizza.ingredients.join(', ')}. <Button className="bg-secondary rounded-1 px-1 py-0 fs-6" type="submit" value={pizza.id} onClick={({ target }) => setPizzaSelected(target.value)}>Saber más</Button>
+ </div>
+  </div>
+</Card.Body>
+
                   <Card.Body className="d-flex justify-content-between align-items-center">
                     <Card.Text className="fw-bolder fs-2 m-0">{CLP.format(pizza.price)}
                     </Card.Text>

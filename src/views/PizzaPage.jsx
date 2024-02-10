@@ -15,7 +15,7 @@ const PizzaPage = () => {
 
   return (
     <Container className="py-4 my-2">
-      <Card key={pizzas[pizzaIndex].id} className="d-flex flex-row card-bg-custom border-0 text-white card-custom-shadow">
+      <Card key={pizzas[pizzaIndex].id} className="d-flex flex-row card-bg-custom border-0 text-white card-custom-shadow overflow-hidden">
         <Card.Body className="px-4 mx-4">
           <Card.Title className="mb-4 pt-4">
             <h1 className="text-capitalize">Pizza {pizzas[pizzaIndex].name}</h1>
@@ -35,7 +35,7 @@ const PizzaPage = () => {
             <Button className="btn secondary" type="button" value={pizzas[pizzaIndex].id} onClick={() => addToCart({ id: pizzas[pizzaIndex].id, type: 'pizza' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
           </Card.Text>
         </Card.Body>
-        <Card.Img variant="top" src={pizzas[pizzaIndex].img} />
+        <Card.Img variant="top" src={pizzas[pizzaIndex].img} height={700}/>
       </Card>
       <div>
         <FoodMenuBeverages/>
