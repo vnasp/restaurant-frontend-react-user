@@ -1,14 +1,52 @@
-import { Container } from "react-bootstrap"
+import { Container, Row, Col, Form, Button, Card, InputGroup } from 'react-bootstrap'
+import { MdLocationOn } from 'react-icons/md'
+import DeliveryTimeSelect from '../components/DeliveryTimeSelect'
+import TabsMenu from '../components/TabsMenu'
+import CardDetail from '../components/CartDetail'
 
 const OrderPage = () => {
   return (
     <Container>
-      <div className="card-custom text-white">
-<div className="p-4">
-Falta el esquema de Natalia
-</div>
-        
-      </div>
+      <Row className="my-2">
+        <Col>
+          <h1 className="text-white text-center">Haz tu Pedido</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={8}>
+          <Card className="card-custom shadow-none">
+            <TabsMenu />
+            <Card.Body>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className="card-custom">
+            <Card.Body>
+              <Card.Title className="text-white">Detalles de Entrega</Card.Title>
+              <Form>
+                <Form.Group className="mb-3" controlId="formAddress">
+                  <InputGroup>
+                    <InputGroup.Text id="basic-addon1"><MdLocationOn /></InputGroup.Text>
+                    <Form.Control
+                      placeholder="Dirección de entrega"
+                      aria-label="address"
+                      aria-describedby="basic-addon1"
+                    />
+                  </InputGroup>
+                </Form.Group>
+                
+                <DeliveryTimeSelect/>
+
+                <Form.Group className="my-3" controlId="formNotes">
+                  <Form.Control as="textarea" rows={3} placeholder="Instrucciones especiales" />
+                </Form.Group>
+                <CardDetail/>
+              </Form>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </Container>
   )
 }

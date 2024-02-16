@@ -11,7 +11,7 @@ const Navigation = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const setActiveclassName = ({ isActive }) => (isActive ? "active" : "inactive")
+  const setActiveclassName = ({ isActive }) => (isActive ? "link-active" : "link-inactive")
   const location = useLocation();
   const isHome = location.pathname === '/'
   const isCart = cartFilter.length > 0
@@ -55,7 +55,7 @@ const Navigation = () => {
                       className={setActiveclassName}
                     > <i className="bi bi-star pe-3"></i> MammaPuntos
                     </NavLink>
-                    <a onClick={handleInscribeClick} className="inactive">
+                    <a onClick={handleInscribeClick} className="link-inactive">
                       <i className="bi bi-person pe-3"></i> Inscríbete
                     </a>
                     <NavLink to="/contacto"

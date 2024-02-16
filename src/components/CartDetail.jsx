@@ -77,7 +77,7 @@ const CartDetail = () => {
       </Row>
       <Row>
         <Col className="text-center">
-          <Button className="secondary btn-lg fs-4" type="button" href="#">Crear Orden</Button>
+          <Button className="btn secondary w-100 fs-4" type="button" href="#">Crear Orden</Button>
         </Col>
       </Row>
       <Row className="pt-4 text-secondary text-center">
