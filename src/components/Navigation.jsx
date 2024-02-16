@@ -7,10 +7,7 @@ import { NavLink, useLocation } from "react-router-dom"
 import { DataContext } from "../context/DataContext"
 
 const Navigation = () => {
-  const { CLP, cartFilter, total, handleInscribeClick } = useContext(DataContext)
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const { CLP, cartFilter, total, handleInscribeClick, show, setShow, handleClose, handleShow } = useContext(DataContext)
   const setActiveclassName = ({ isActive }) => (isActive ? "link-active" : "link-inactive")
   const location = useLocation();
   const isHome = location.pathname === '/'

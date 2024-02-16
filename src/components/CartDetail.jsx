@@ -30,7 +30,7 @@ const CartDetail = () => {
   const decrementQty = (productId) => {
     const cartIndex = cart.findIndex(item => item.id === productId);
     const updateCart = [...cart]
-    updateCart[cartIndex] = { ...updateCart[cartIndex], qty: updateCart[cartIndex].qty + 1 }
+    updateCart[cartIndex] = { ...updateCart[cartIndex], qty: updateCart[cartIndex].qty - 1 }
     setCart(updateCart)
   }
 

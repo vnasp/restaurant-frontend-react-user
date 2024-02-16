@@ -10,11 +10,40 @@ const DataProvider = ({ children }) => {
   const [pizzas, setPizzas] = useState([])
   const [sideDishes, setSideDishes] = useState([])
   const [beverages, setBeverages] = useState([])
-
   const [cart, setCart] = useState([])
   const [coupon, setCoupon] = useState('')
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
+  // Popup Registro o Inicio de Sesión
+  const handleInscribeClick = (e) => {
+    e.preventDefault(); // Previene la navegación
+    MySwal.fire({
+      title: '<h2>Ingresa a Mamma Mia</h2>',
+      html: `
+        <p class="text-white">Acumula MammaPuntos, revisa tus pedidos y pizzas favoritas.</p>
+        <button type="button" class="login-with-google-btn">Ingresa con Google</button>
+      `,
+      showConfirmButton: false,
+      showCancelButton: false,
+      focusConfirm: false,
+      customClass: {
+        popup: 'custom-popup' // Clase personalizada para el popup si necesitas más estilos
+      },
+      didRender: (element) => {
+        // Añade el manejador de eventos para el botón de Google después de renderizar la alerta
+        const loginBtn = element.querySelector('.login-with-google-btn');
+        loginBtn.addEventListener('click', () => {
+          // Aquí implementas la lógica para iniciar sesión con Google
+          console.log('Iniciar sesión con Google');
+        });
+      }
+    });
 
+  };
+
+  // Obtener la data de los productos
   const getPizzas = async () => {
     try {
       const response = await fetch("/pizzas.json")
@@ -66,6 +95,7 @@ const DataProvider = ({ children }) => {
     getBeverages()
   }, [])
 
+    // Manejo del carrito
   const addToCart = (item) => {
     // Destructura el objeto item para obtener el id y el tipo
     const { id, type } = item;
@@ -95,10 +125,8 @@ const DataProvider = ({ children }) => {
       newCart[cartIndex].qty += 1;
       setCart(newCart);
     }
+    setShow(true)
   }
-
-  const cartFilter = cart.filter((item) => item.qty > 0)
-
   let discount
   if (coupon == "tengohambre") {
     discount = 0.9
@@ -106,38 +134,11 @@ const DataProvider = ({ children }) => {
   else {
     discount = 1
   }
-
+  const cartFilter = cart.filter((item) => item.qty > 0)
   const total = (cartFilter.reduce((accumulator, { qty, price }) => accumulator + (qty * price), 0)) * discount
 
-  // Popup Registro o Inicio de Sesión
-  const handleInscribeClick = (e) => {
-    e.preventDefault(); // Previene la navegación
-    MySwal.fire({
-      title: '<h2>Ingresa a Mamma Mia</h2>',
-      html: `
-        <p class="text-white">Acumula MammaPuntos, revisa tus pedidos y pizzas favoritas.</p>
-        <button type="button" class="login-with-google-btn">Ingresa con Google</button>
-      `,
-      showConfirmButton: false,
-      showCancelButton: false,
-      focusConfirm: false,
-      customClass: {
-        popup: 'custom-popup' // Clase personalizada para el popup si necesitas más estilos
-      },
-      didRender: (element) => {
-        // Añade el manejador de eventos para el botón de Google después de renderizar la alerta
-        const loginBtn = element.querySelector('.login-with-google-btn');
-        loginBtn.addEventListener('click', () => {
-          // Aquí implementas la lógica para iniciar sesión con Google
-          console.log('Iniciar sesión con Google');
-        });
-      }
-    });
-
-  };
-
   return (
-    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, coupon, setCoupon, total, CLP, handleInscribeClick }}>
+    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, coupon, setCoupon, total, CLP, handleInscribeClick, show, setShow, handleClose, handleShow }}>
       {children}
     </DataContext.Provider>
   )
