@@ -17,7 +17,7 @@ const TabsMenu = () => {
                   </Card.Header>
                   <Card.Body className="d-flex flex-row">
                     <Card.Subtitle className="text-secondary text-capitalize"> <h6>{pizza.ingredients.join(', ')}</h6></Card.Subtitle>
-                    <Card.Img variant="right" src={pizza.img} height={80} />
+                    <Card.Img variant="right" src={pizza.img} width={80} height={60} />
                   </Card.Body>
                 <Card.Footer className="d-flex flex-row justify-content-between align-items-center">
                   {CLP.format(pizza.price)}
@@ -38,7 +38,7 @@ const TabsMenu = () => {
                   </Card.Header>
                   <Card.Body className="d-flex flex-row">
                     <Card.Subtitle className="text-secondary"> <h6>{sidedish.desc}</h6></Card.Subtitle>
-                    <Card.Img variant="right" src={sidedish.img} height={80} />
+                    <Card.Img variant="right" src={sidedish.img} width={80} height={60}/>
                   </Card.Body>
                 <Card.Footer className="d-flex flex-row justify-content-between align-items-center">
                   {CLP.format(sidedish.price)}
@@ -59,7 +59,7 @@ const TabsMenu = () => {
                   </Card.Header>
                   <Card.Body className="d-flex flex-row">
                     <Card.Subtitle className="text-secondary"> <h6>{beverage.desc}</h6></Card.Subtitle>
-                    <Card.Img variant="right" src={beverage.img} height={80} />
+                    <Card.Img variant="right" src={beverage.img} width={80} height={60}/>
                   </Card.Body>
                 <Card.Footer className="d-flex flex-row justify-content-between align-items-center">
                   {CLP.format(beverage.price)}
