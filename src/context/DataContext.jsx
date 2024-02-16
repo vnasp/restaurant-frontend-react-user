@@ -135,10 +135,12 @@ const DataProvider = ({ children }) => {
     discount = 1
   }
   const cartFilter = cart.filter((item) => item.qty > 0)
-  const total = (cartFilter.reduce((accumulator, { qty, price }) => accumulator + (qty * price), 0)) * discount
+  const subtotal = (cartFilter.reduce((accumulator, { qty, price }) => accumulator + (qty * price), 0))
+  const total = subtotal * discount
+  const discountAmount = total - (discount * total)
 
   return (
-    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, coupon, setCoupon, total, CLP, handleInscribeClick, show, setShow, handleClose, handleShow }}>
+    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, show, setShow, handleClose, handleShow }}>
       {children}
     </DataContext.Provider>
   )

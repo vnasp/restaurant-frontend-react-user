@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Container, Button, Card } from "react-bootstrap"
 import { DataContext } from "../context/DataContext"
@@ -12,6 +12,10 @@ const PizzaPage = () => {
   const pizzaIndex = pizzas.findIndex(pizza => {
     return pizza.id === id
   })
+
+  useEffect(() => {
+    window.scrollTo(0, 220);
+  }, []); 
 
   return (
     <Container className="py-4 my-2">
