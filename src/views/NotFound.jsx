@@ -3,16 +3,12 @@ import { Container, Row, Col, Image } from "react-bootstrap"
 const NotFound = () => {
   return (
     <>
-      <Container className="padding-custom">
-        <Row className="mb-3">
-          <Col className="text-center">
-            <h1>¡Alguien se ha comido esta página!</h1>
-            <h3>Prueba ingresando desde el inicio a tu pizza favorita</h3>
-          </Col>
-        </Row>
+      <Container>
         <Row>
           <Col className="text-center">
-            <Image src="../assets/img/notfound.png" className="w-25" />
+            <h1 className="text-white">¡Alguien se ha comido esta página!</h1>
+            <h3>Prueba ingresando desde el inicio a tu pizza favorita</h3>
+            <Image src="../assets/img/notfound.jpg" width={500} className="border rounded-circle border-5 border-dark mt-4" />
           </Col>
         </Row>
       </Container>

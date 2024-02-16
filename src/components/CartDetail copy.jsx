@@ -36,20 +36,8 @@ const CartDetail = () => {
 
   return (
     <>
-      <Row>
-        <Col>
-        <Table className="w-100">
-          <thead>
-            <tr>
-              <th className="w-25"></th>
-              <th className="w-100">Pizza</th>
-              <th className="w-50">Subtotal</th>
-              <th className="w-25"></th>
-              <th className="w-25">Cant.</th>
-              <th className="w-25"></th>
-            </tr>
-          </thead>
-          <tbody>
+      <Col>
+       
             {cartFilter.map((item) => (
               <tr className="align-middle" key={item.id}>
                 <td><Image src={item.img} className="img-thumbnail" /> </td>
@@ -60,9 +48,7 @@ const CartDetail = () => {
                 <td><Button className="btn-light" type="button" value={item.id} onClick={(e) => incrementQty(e, 'value')}><i className="bi bi-plus-circle-fill"></i></Button></td>
               </tr>
             ))}
-          </tbody>
-        </Table></Col>
-      </Row>
+
       <Row>
         <Col> <div id="coupon-box" className="p-3 border rounded">
           <div className="fw-bolder pb-3 border-bottom">

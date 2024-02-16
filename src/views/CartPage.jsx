@@ -13,7 +13,7 @@ const CartPage = () => {
 
 
   return (
-    <Container className="padding-custom">
+    <Container>
       {isCart ? <CartDetail /> : <CartEmpty />}
     </Container>
   )

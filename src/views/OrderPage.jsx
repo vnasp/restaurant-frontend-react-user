@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Button, Card, InputGroup } from 'react-bootstrap'
+import { Container, Row, Col, Form, Card, InputGroup } from 'react-bootstrap'
 import { MdLocationOn } from 'react-icons/md'
 import DeliveryTimeSelect from '../components/DeliveryTimeSelect'
 import TabsMenu from '../components/TabsMenu'
@@ -6,8 +6,8 @@ import CardDetail from '../components/CartDetail'
 
 const OrderPage = () => {
   return (
-    <Container>
-      <Row className="my-2">
+    <Container className="pb-2 mb-2">
+      <Row className="mb-2">
         <Col>
           <h1 className="text-white text-center">Haz tu Pedido</h1>
         </Col>
@@ -24,7 +24,6 @@ const OrderPage = () => {
           <Card className="card-custom">
             <Card.Body>
               <Card.Title className="text-white">Detalles de Entrega</Card.Title>
-              <Form>
                 <Form.Group className="mb-3" controlId="formAddress">
                   <InputGroup>
                     <InputGroup.Text id="basic-addon1"><MdLocationOn /></InputGroup.Text>
@@ -42,7 +41,6 @@ const OrderPage = () => {
                   <Form.Control as="textarea" rows={3} placeholder="Instrucciones especiales" />
                 </Form.Group>
                 <CardDetail/>
-              </Form>
             </Card.Body>
           </Card>
         </Col>

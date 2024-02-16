@@ -89,7 +89,7 @@ const Navigation = () => {
           </Container>
         </Navbar>
       ))}
-      <Offcanvas show={show} onHide={handleClose} placement="end" className="card-custom text-white p-4">
+      <Offcanvas show={show} onHide={handleClose} placement="end" className="card-custom rounded-0 p-1">
         <Offcanvas.Header className="cart-offcanvas-custom-tittle" closeButton>
           <Offcanvas.Title className="fs-4">Tu Pedido</Offcanvas.Title>
         </Offcanvas.Header>

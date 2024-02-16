@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { DataContext } from "../context/DataContext"
-import { Row, Col, Card, Tabs, Tab, Form, Button } from 'react-bootstrap'
+import { Row, Col, Card, Tabs, Tab,  Button } from 'react-bootstrap'
 
 const TabsMenu = () => {
   const { pizzas, sideDishes, beverages, addToCart, CLP } = useContext(DataContext)
