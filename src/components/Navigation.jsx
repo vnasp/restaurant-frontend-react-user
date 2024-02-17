@@ -1,13 +1,13 @@
 import SocialMedia from "./SocialMedia"
 import CartDetail from "./CartDetail"
 import CartEmpty from "./CartEmpty"
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { Container, Image, Nav, Navbar, Offcanvas, Button } from "react-bootstrap"
 import { NavLink, useLocation } from "react-router-dom"
 import { DataContext } from "../context/DataContext"
 
 const Navigation = () => {
-  const { CLP, cartFilter, total, handleInscribeClick, show, setShow, handleClose, handleShow } = useContext(DataContext)
+  const { CLP, cartFilter, total, handleInscribeClick, showCart, setShowCart, handleCloseCart, handleShowCart, showMenu, setShowMenu, handleCloseMenu, handleShowMenu } = useContext(DataContext)
   const setActiveclassName = ({ isActive }) => (isActive ? "link-active" : "link-inactive")
   const location = useLocation();
   const isHome = location.pathname === '/'
@@ -35,27 +35,27 @@ const Navigation = () => {
                 <Offcanvas.Body className="d-flex flex-column justify-content-between ms-4">
                   <div className="watermark">MammaMia</div>
                   <Nav className="d-flex flex-column fs-4 text-white mb-5 pb-5">
-                    <NavLink to="/pedir"
+                    <NavLink to="/pedir" onClick={() => setMenuShow(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-basket pe-3"></i> Pide Online
                     </NavLink>
-                    <NavLink to="/menu"
+                    <NavLink to="/menu" onClick={() => setMenuShow(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-book pe-3"></i> Menú
                     </NavLink>
-                    <NavLink to="/locales"
+                    <NavLink to="/locales" onClick={() => setMenuShow(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-shop pe-3"></i> Locales
                     </NavLink>
 
-                    <NavLink to="/puntos"
+                    <NavLink to="/puntos" onClick={() => setMenuShow(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-star pe-3"></i> MammaPuntos
                     </NavLink>
                     <a onClick={handleInscribeClick} className="link-inactive">
                       <i className="bi bi-person pe-3"></i> Inscríbete
                     </a>
-                    <NavLink to="/contacto"
+                    <NavLink to="/contacto" onClick={() => setMenuShow(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-telephone pe-3"></i> Contacto
                     </NavLink>
@@ -75,7 +75,7 @@ const Navigation = () => {
                 </a>
               </div>
               <Button
-                onClick={handleShow}
+                onClick={handleShowCart}
                 id="carrito"
                 className="text-white btn secondary d-flex align-items-center justify-content-center">
 
@@ -86,7 +86,7 @@ const Navigation = () => {
           </Container>
         </Navbar>
       ))}
-      <Offcanvas show={show} onHide={handleClose} placement="end" className="card-custom rounded-0 p-1">
+      <Offcanvas show={showCart} onHide={handleCloseCart} placement="end" className="card-custom shadow-none rounded-0 p-1">
         <Offcanvas.Header className="cart-offcanvas-custom-tittle" closeButton>
           <Offcanvas.Title className="fs-4">Tu Pedido</Offcanvas.Title>
         </Offcanvas.Header>

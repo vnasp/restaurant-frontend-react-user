@@ -34,16 +34,16 @@ function ContactPage() {
   return (
     <Container className="custom-margin-bottom">
       <Row className="card-custom text-whiterounded-3">
-        <Col className="col-3 p-4">
+        <Col className="col-3 p-4 margin-top-custom">
           <CallUs/>
           <OpeningHours />
         </Col>
-        <Col className="col-6 py-4">
+        <Col className="col-6 py-4 pe-4">
           <Card.Title><h2 className="fs-1">Escríbenos</h2></Card.Title>
-          <Card.Body>
+          <Card.Body className="pe-4">
             <Form onSubmit={handleSubmit}>
               <InputGroup size="lg" className="py-4">
-                <InputGroup.Text id="inputGroup-sizing-lg">Nombre</InputGroup.Text>
+                <InputGroup.Text id="inputGroup-sizing-lg" className="w-25">Nombre</InputGroup.Text>
                 <Form.Control
                   aria-label="Large"
                   aria-describedby="inputGroup-sizing-lg"
@@ -56,7 +56,7 @@ function ContactPage() {
                 />
               </InputGroup>
               <InputGroup size="lg" className="py-4">
-                <InputGroup.Text id="inputGroup-sizing-lg">Email</InputGroup.Text>
+                <InputGroup.Text id="inputGroup-sizing-lg" className="w-25">Email</InputGroup.Text>
                 <Form.Control
                   aria-label="Large"
                   aria-describedby="inputGroup-sizing-lg"
@@ -69,7 +69,7 @@ function ContactPage() {
                 />
               </InputGroup>
               <InputGroup size="lg" className="py-4">
-                <InputGroup.Text id="inputGroup-sizing-lg">Mensaje</InputGroup.Text>
+                <InputGroup.Text id="inputGroup-sizing-lg" className="w-25">Mensaje</InputGroup.Text>
                 <Form.Control
                   as="textarea"
                   aria-describedby="textArea-sizing-lg"
@@ -88,6 +88,7 @@ function ContactPage() {
         </Col>
       </Row>
     </Container>
+    
 
   );
 }

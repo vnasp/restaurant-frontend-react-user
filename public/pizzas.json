@@ -3,7 +3,7 @@
     "id": 1,
     "desc": "La Pizza Napolitana es un tributo a los sabores simples pero profundos de Italia, con una base de tomate fresco, mozzarella de búfala, aceitunas negras y anchoas, todo adornado con hojas de albahaca fresca. Su borde ligeramente carbonizado y su centro tierno evocan la autenticidad del horno de leña napolitano. Cada una de estas pizzas ha sido cuidadosamente diseñada para ofrecer una experiencia culinaria única, utilizando los ingredientes más frescos y de la más alta calidad para satisfacer los paladares más exigentes.",
     "img": "https://i.pinimg.com/736x/0e/bb/da/0ebbda1bf1c1f7bf79f700dd0ac12452.jpg",
-    "ingredients": ["tomate","mozzarella", "aceitunas", "albahaca", "aceite de oliva"],
+    "ingredients": ["tomate","mozzarella", "aceitunas", "albahaca"],
     "name": "napolitana",
     "price": 5950
   },

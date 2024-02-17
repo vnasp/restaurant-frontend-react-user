@@ -149,8 +149,10 @@ a {
 }
 
 .secondary:hover,
-.secondary:active {
+.secondary:active,
+.secondary:focus-visible {
   background-color: #8A9A5B;
+  border:0;
 }
 
 .text-emphasis {
@@ -253,6 +255,36 @@ a {
   font-size: 2rem;
 }
 
+.points-custom-background {
+  background-image: url("/assets/img/background-points.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.nav {
+  background-color: #df554e;
+  border-color:#df554e;
+}
+
+.nav-link {
+  background-color: lightgray;
+  color:gray;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover
+ {
+  background-color:#252832;
+  color:white;
+  border-color:#252832;
+}
+
+.margin-top-custom {
+margin-top:5.5rem;
+}
+
+
 .login-with-google-btn {
   background-color: #4285F4; 
   transition: background-color .3s, box-shadow .3s;
@@ -284,29 +316,4 @@ a {
       0 2px 4px rgba(0, 0, 0, .25),
       0 0 0 3px #c8dafc;
   }
-}
-
-.points-custom-background {
-  background-image: url("/assets/img/background-points.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
-}
-
-.nav {
-  background-color: #df554e;
-  border-color:#df554e;
-}
-
-.nav-link {
-  background-color: lightgray;
-  color:gray;
-}
-
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-link:hover
- {
-  background-color:#252832;
-  color:white;
-  border-color:#252832;
 }

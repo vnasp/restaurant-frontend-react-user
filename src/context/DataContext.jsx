@@ -12,13 +12,17 @@ const DataProvider = ({ children }) => {
   const [beverages, setBeverages] = useState([])
   const [cart, setCart] = useState([])
   const [coupon, setCoupon] = useState('')
-  const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+  const [showCart, setShowCart] = useState(false)
+  const handleCloseCart = () => setShowCart(false)
+  const handleShowCart = () => setShowCart(true)
+  const [showMenu, setShowMenu] = useState(false)
+  const handleCloseMenu = () => setShowMenu(false)
+  const handleShowMenu = () => setShowMenu(true)
 
   // Popup Registro o Inicio de Sesión
   const handleInscribeClick = (e) => {
-    e.preventDefault(); // Previene la navegación
+    e.preventDefault()
+    setShowMenu(false)
     MySwal.fire({
       title: '<h2>Ingresa a Mamma Mia</h2>',
       html: `
@@ -125,7 +129,7 @@ const DataProvider = ({ children }) => {
       newCart[cartIndex].qty += 1;
       setCart(newCart);
     }
-    setShow(true)
+    setCartShow(true)
   }
   let discount
   if (coupon == "tengohambre") {
@@ -140,7 +144,7 @@ const DataProvider = ({ children }) => {
   const discountAmount = total - (discount * total)
 
   return (
-    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, show, setShow, handleClose, handleShow }}>
+    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, showCart, setShowCart, handleCloseCart, handleShowCart, showMenu, setShowMenu, handleCloseMenu, handleShowMenu}}>
       {children}
     </DataContext.Provider>
   )

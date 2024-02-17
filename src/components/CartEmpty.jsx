@@ -9,18 +9,16 @@ const CartEmpty = () => {
           <h2>Tu carrito</h2>
           <h2>está vacío</h2>
           <h3 className="text-white fs-4">¡Falta pizza en tu vida!</h3>
-          <div className="btn secondary fs-4 my-4">
-            <Link to="/pedir" >
-              <Button className="btn secondary fs-4"
+            <Link to="/pedir">
+              <Button className="btn secondary fs-4 my-4"
               >Pide tu pizza
               </Button>
             </Link>
-          </div>
         </Col>
       </Row>
       <Row>
         <Col className="text-center m-2 pt-2">
-            Usa el cupón <i className="bi bi-tag"></i> <span className="text-emphasis">TENGOHAMBRE</span> y obtén un 10% de descuento en tu compra.
+          Usa el cupón <i className="bi bi-tag"></i> <span className="text-emphasis text-uppercase">tengohambre</span> y obtén un 10% de descuento en tu compra.
         </Col>
       </Row>
 

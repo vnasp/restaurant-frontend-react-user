@@ -14,7 +14,7 @@ const HomePage = () => {
                 <h2>Pizzería Gourmet</h2>
                 <h3>Tradicionales y simples, pero con el sabor de generaciones</h3>
               </div>
-              <Link to="/pedir" style={{ textDecoration: 'none' }}>
+              <Link to="/pedir">
                 <Button className="btn secondary fs-4"
                 >Pide tu pizza
                 </Button>
