@@ -36,29 +36,32 @@ const StoresPage = () => {
   const filteredLocations = locations.filter(location =>
     location.message.toLowerCase().includes(filterText.toLowerCase())
   );
- return (
+  return (
     <Container className="custom-margin-bottom">
-      <Row className="card-custom text-white">
+      <h1 className="text-white">Locales</h1>
+      <h3 className="text-center pb-4">
+            Nuestra pizzería se destaca por su singular ubicación dentro de parques, ofreciendo a sus clientes no solo una experiencia culinaria excepcional con sus deliciosas pizzas artesanales, sino también un <span>ambiente tranquilo y naturalmente hermoso</span>. Rodeados de exuberante vegetación, caminos serpenteantes y el tranquilo murmullo de la naturaleza, cada local invita a los visitantes a disfrutar de momentos de paz y relajación. Esta combinación única de <span>sabores gourmet y entornos naturales</span> convierte a nuestra pizzería en el destino perfecto para aquellos que buscan escapar del bullicio de la ciudad y sumergirse en una experiencia gastronómica relajante y revitalizante, donde cada bocado se acompaña de vistas impresionantes y aire fresco.</h3>
+      <Row className="card-custom custom-shadow">
         <Col className="col-4">
-              <div className="py-4">
-              <InputGroup>
+          <div className="py-4">
+            <InputGroup>
               <Form.Control
                 placeholder="Busca tu Mamma Mia"
                 aria-label="Busca tu Mamma Mia"
                 aria-describedby="basic-input-filter"
                 onChange={(e) => setFilterText(e.target.value)} // Actualiza el estado con el texto ingresado
               />
-                <Button variant="btn primary">
-                  Filtrar
-                </Button>
-              </InputGroup>
-              </div>
+              <Button variant="btn primary">
+                Filtrar
+              </Button>
+            </InputGroup>
+          </div>
           <div className="d-flex flex-column">
-          {filteredLocations.map((location) => (
-            <div className="py-2" key={location.id}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#df554e" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-          </svg> {location.message}</div>
+            {filteredLocations.map((location) => (
+              <div className="py-2" key={location.id}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#df554e" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                </svg> {location.message}</div>
             ))}
           </div>
         </Col>
@@ -73,9 +76,9 @@ const StoresPage = () => {
             </Marker>
           ))}
         </MapContainer></Col>
-
       </Row>
-    <FoodMenuSideDishes/>
+      <h2 className="text-white fs-1 pt-4 mt-4">Acompañamientos</h2>
+      <FoodMenuSideDishes />
     </Container>
   );
 }

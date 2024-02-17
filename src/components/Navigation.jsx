@@ -35,13 +35,9 @@ const Navigation = () => {
                 <Offcanvas.Body className="d-flex flex-column justify-content-between ms-4">
                   <div className="watermark">MammaMia</div>
                   <Nav className="d-flex flex-column fs-4 text-white mb-5 pb-5">
-                    <NavLink to="/pedir" onClick={() => setMenuShow(false)}
-                      className={setActiveclassName}
-                    > <i className="bi bi-basket pe-3"></i> Pide Online
-                    </NavLink>
                     <NavLink to="/menu" onClick={() => setMenuShow(false)}
                       className={setActiveclassName}
-                    > <i className="bi bi-book pe-3"></i> Menú
+                    > <i className="bi bi-basket pe-3"></i> Pide Online
                     </NavLink>
                     <NavLink to="/locales" onClick={() => setMenuShow(false)}
                       className={setActiveclassName}
@@ -86,7 +82,7 @@ const Navigation = () => {
           </Container>
         </Navbar>
       ))}
-      <Offcanvas show={showCart} onHide={handleCloseCart} placement="end" className="card-custom shadow-none rounded-0 p-1">
+      <Offcanvas show={showCart} onHide={handleCloseCart} placement="end" className="card-custom rounded-0 p-1">
         <Offcanvas.Header className="cart-offcanvas-custom-tittle" closeButton>
           <Offcanvas.Title className="fs-4">Tu Pedido</Offcanvas.Title>
         </Offcanvas.Header>

@@ -19,7 +19,7 @@ const PizzaPage = () => {
 
   return (
     <Container className="py-4 my-2">
-      <Card key={pizzas[pizzaIndex].id} className="d-flex flex-row card-custom border-0 text-white overflow-hidden">
+      <Card key={pizzas[pizzaIndex].id} className="d-flex flex-row card-custom custom-shadow overflow-hidden">
         <Card.Body className="px-4 mx-4">
           <Card.Title className="mb-4 pt-4">
             <h1 className="text-capitalize">Pizza {pizzas[pizzaIndex].name}</h1>

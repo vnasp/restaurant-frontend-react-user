@@ -1,5 +1,6 @@
 import CallUs from "../components/CallUs"
 import OpeningHours from "../components/OpeningHours"
+import FoodMenuBeverages from "../components/FoodMenuBeverages"
 import { Container, Row, Col, Form, Button, Card, InputGroup, Image } from "react-bootstrap"
 import { useState } from 'react'
 
@@ -33,13 +34,15 @@ function ContactPage() {
 
   return (
     <Container className="custom-margin-bottom">
-      <Row className="card-custom text-whiterounded-3">
-        <Col className="col-3 p-4 margin-top-custom">
+      <h1 className="text-white">Escríbenos</h1>
+
+      <Row className="card-custom custom-shadow rounded-3">
+        <Col className="col-3 p-3 custom-margin-top">
           <CallUs/>
           <OpeningHours />
         </Col>
         <Col className="col-6 py-4 pe-4">
-          <Card.Title><h2 className="fs-1">Escríbenos</h2></Card.Title>
+          <Card.Title>Formulario de Contacto</Card.Title>
           <Card.Body className="pe-4">
             <Form onSubmit={handleSubmit}>
               <InputGroup size="lg" className="py-4">
@@ -87,8 +90,9 @@ function ContactPage() {
         <Col className="col-3 contact-custom-background">
         </Col>
       </Row>
+      <h2 className="text-white fs-1 pt-4 mt-4">Bebestibles</h2>
+      <FoodMenuBeverages/>
     </Container>
-    
 
   );
 }

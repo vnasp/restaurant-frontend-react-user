@@ -99,7 +99,7 @@ const DataProvider = ({ children }) => {
     getBeverages()
   }, [])
 
-    // Manejo del carrito
+  // Manejo del carrito
   const addToCart = (item) => {
     // Destructura el objeto item para obtener el id y el tipo
     const { id, type } = item;
@@ -129,7 +129,7 @@ const DataProvider = ({ children }) => {
       newCart[cartIndex].qty += 1;
       setCart(newCart);
     }
-    setCartShow(true)
+    setShowCart(true)
   }
   let discount
   if (coupon == "tengohambre") {
@@ -141,10 +141,10 @@ const DataProvider = ({ children }) => {
   const cartFilter = cart.filter((item) => item.qty > 0)
   const subtotal = (cartFilter.reduce((accumulator, { qty, price }) => accumulator + (qty * price), 0))
   const total = subtotal * discount
-  const discountAmount = total - (discount * total)
+  const discountAmount = subtotal - (discount * subtotal)
 
   return (
-    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, showCart, setShowCart, handleCloseCart, handleShowCart, showMenu, setShowMenu, handleCloseMenu, handleShowMenu}}>
+    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, showCart, setShowCart, handleCloseCart, handleShowCart, showMenu, setShowMenu, handleCloseMenu, handleShowMenu }}>
       {children}
     </DataContext.Provider>
   )

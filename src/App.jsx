@@ -24,7 +24,7 @@ const App = () => {
           path="/menu"
           element={<FoodMenu />} />
         <Route
-          path="/pedir"
+          path="/menu"
           element={<OrderPage />} />
         <Route
           path="/carrito"

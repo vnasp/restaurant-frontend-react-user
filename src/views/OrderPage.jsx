@@ -1,7 +1,6 @@
 import { Container, Row, Col, Form, Card, InputGroup } from 'react-bootstrap'
 import { MdLocationOn } from 'react-icons/md'
 import DeliveryTimeSelect from '../components/DeliveryTimeSelect'
-import TabsMenu from '../components/TabsMenu'
 import CardDetail from '../components/CartDetail'
 
 const OrderPage = () => {
@@ -14,8 +13,7 @@ const OrderPage = () => {
       </Row>
       <Row>
         <Col md={8}>
-          <Card className="card-custom shadow-none">
-            <TabsMenu />
+          <Card className="card-custom">
             <Card.Body>
             </Card.Body>
           </Card>
@@ -36,10 +34,6 @@ const OrderPage = () => {
                 </Form.Group>
                 
                 <DeliveryTimeSelect/>
-
-                <Form.Group className="my-3" controlId="formNotes">
-                  <Form.Control as="textarea" rows={3} placeholder="Instrucciones especiales" />
-                </Form.Group>
                 <CardDetail/>
             </Card.Body>
           </Card>

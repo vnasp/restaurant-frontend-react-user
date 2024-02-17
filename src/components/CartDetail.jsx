@@ -1,7 +1,10 @@
 import { useContext, useRef, useState } from "react"
-import { Row, Col, Accordion, Image, Button, Form, InputGroup } from "react-bootstrap"
+import { Row, Col, Accordion, Image, Button, Form, InputGroup, Card } from "react-bootstrap"
 import { DataContext } from "../context/DataContext"
-import { FaCheck } from "react-icons/fa"
+import { FaCheck,FaTimes } from "react-icons/fa"
+import { MdLocationOn } from 'react-icons/md'
+import DeliveryTimeSelect from "./DeliveryTimeSelect"
+
 
 const CartDetail = () => {
   const { CLP, subtotal, total, cart, setCart, cartFilter, discountAmount, coupon, setCoupon } = useContext(DataContext)
@@ -38,7 +41,7 @@ const CartDetail = () => {
   return (
     <>
       {cartFilter.map((item) => (
-        <Row className="mb-3" key={item.id}>
+        <Row className="my-3" key={item.id}>
           <Col className="col-3"><Image src={item.img} width={80} className="rounded-2" /></Col>
           <Col className="col-6 text-capitalize">
             <h3>{item.name}</h3>
@@ -62,7 +65,7 @@ const CartDetail = () => {
         <div className="text-secondary">Envío: </div>
         <div>Gratis</div>
       </div>
-      {coupon && (
+      {coupon === "tengohambre" && (
         <div className="d-flex justify-content-between fs-6">
           <div className="text-secondary">Cupón: </div>
           <div>{CLP.format(discountAmount)}</div>
@@ -90,14 +93,38 @@ const CartDetail = () => {
                   Canjear
                 </Button>
               </InputGroup>
-              {coupon && (
-                <div className="d-flex justify-content-end text-right align-items-center"><FaCheck className="me-2"/> Cupón aplicado</div>
-              )}
+              {
+  coupon ? (
+    coupon === "tengohambre" ? (
+      <div className="d-flex justify-content-end text-right align-items-center"><FaCheck className="me-2"/> Cupón aplicado</div>
+    ) : (
+      <div className="d-flex justify-content-end text-right align-items-center"><FaTimes className="me-2"/> Cupón inválido</div>
+    )
+  ) : null
+}
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
       </Form>
-      <Button className="btn secondary w-100 fs-4" type="button" href="#">Crear Orden</Button>
+      <hr/>
+      <Card className="card-custom pb-4">
+            <Card.Body>
+              <Card.Title className="text-white">Detalles de Entrega</Card.Title>
+                <Form.Group className="mb-3" controlId="formAddress">
+                  <InputGroup>
+                    <InputGroup.Text id="basic-addon1"><MdLocationOn /></InputGroup.Text>
+                    <Form.Control
+                      placeholder="Dirección de entrega"
+                      aria-label="address"
+                      aria-describedby="basic-addon1"
+                    />
+                  </InputGroup>
+                </Form.Group>
+                
+                <DeliveryTimeSelect/>
+            </Card.Body>
+          </Card>
+      <Button className="btn secondary w-100 fs-4" type="button" href="/">Crear Orden</Button>
       <Row className="pt-4 text-secondary text-center">
         <Col>Acumulas <i className="bi bi-star"></i> {cart_mamapuntos} MammaPuntos</Col>
       </Row>
