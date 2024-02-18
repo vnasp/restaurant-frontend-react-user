@@ -19,17 +19,17 @@ const PizzaPage = () => {
 
   return (
     <Container className="py-4 my-2">
-      <Card key={pizzas[pizzaIndex].id} className="d-flex flex-row card-custom custom-shadow overflow-hidden">
-        <Card.Body className="px-4 mx-4">
+      <Card key={pizzas[pizzaIndex].id} className="d-flex flex-column flex-lg-row card-custom custom-shadow overflow-hidden">
+        <Card.Body className="px-2 px-lg-4 mx-2 mx-lg-4">
           <Card.Title className="mb-4 pt-4">
             <h1 className="text-capitalize">Pizza {pizzas[pizzaIndex].name}</h1>
           </Card.Title>
           <Card.Text className="text-justify">
             {pizzas[pizzaIndex].desc}
             </Card.Text>
-            <div className="d-flex text-secondary text-capitalize mb-4 pb-4">
+            <div className="d-flex flex-column flex-lg-row text-white text-capitalize mb-4 pb-4">
               {pizzas[pizzaIndex].ingredients.map((ingredient, index) => (
-                <p key={index} className="badge-red rounded-3  px-2 py-1 me-2">
+                <p key={index} className="badge-red rounded-3 px-2 py-1 me-2">
                   {ingredient}
                 </p>
               ))}
@@ -39,7 +39,7 @@ const PizzaPage = () => {
             <Button className="btn secondary" type="button" value={pizzas[pizzaIndex].id} onClick={() => addToCart({ id: pizzas[pizzaIndex].id, type: 'pizza' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
           </Card.Text>
         </Card.Body>
-        <Card.Img variant="top" src={pizzas[pizzaIndex].img} height={700}/>
+        <Card.Img variant="top" src={pizzas[pizzaIndex].img} className="pizza-img"/>
       </Card>
       <div>
         <FoodMenuBeverages/>

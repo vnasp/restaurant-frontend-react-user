@@ -73,8 +73,8 @@ const Navigation = () => {
                 onClick={handleShowCart}
                 id="carrito"
                 className=" btn secondary d-flex align-items-center justify-content-center">
-                <i className="bi bi-basket pe-2"></i>
-                {CLP.format(total)}
+                <i className="bi bi-basket pe-lg-2"></i>
+                <span className="d-none d-md-inline">{CLP.format(total)}</span>
               </Button>
             </div>
           </Container>

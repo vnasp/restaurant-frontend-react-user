@@ -19,7 +19,7 @@ h1 {
 
 h2 {
   font-family: 'Satisfy', serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
 }
 
@@ -46,6 +46,7 @@ h6 {
 
 a {
   text-decoration: none;
+  color:white;
 }
 
 .navigation {
@@ -209,6 +210,10 @@ a {
   box-shadow: rgba(123, 43, 59, 0.5) 0px 10px 20px, rgba(123, 43, 59, 0.5) 0px 6px 6px;
 }
 
+.pizza-img {
+  height:250px;
+}
+
 .text-emphasis {
   color: #df554e
 }
@@ -220,6 +225,9 @@ a {
   height: 400px;
 }
 
+.bg-opacity-25 {
+  background-color: rgba(0, 0, 0, 0.25);
+}
 .badge-red {
   background-color: #df554e;
 }
@@ -374,5 +382,11 @@ a {
 
   .login-icon-custom {
     padding-right: 2rem;
+  }
+  .bg-opacity-25 {
+    background-color:transparent;
+  }
+  .pizza-img {
+    height:700px;
   }
 }
