@@ -22,7 +22,7 @@ const FooterPage = () => {
               <div className="mb-2"><span className="badge-red p-1 me-2">FRONTEND</span> Valentina Muñoz</div>
             </Col>
             <Col className="mt-4 pt-4 d-none d-lg-block">
-              <Image src="/assets/img/logo_white.png" width={200} />
+              <Image src="./assets/img/logo_white.png" width={200} />
             </Col>
           </Row>
         </div>
