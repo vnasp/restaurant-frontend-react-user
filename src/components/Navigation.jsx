@@ -17,7 +17,7 @@ const Navigation = () => {
   return (
     <div className={isHome ? 'navigation p-4' : 'p-4 mb-4'}>
       {[false].map((expand) => (
-        <Navbar key={expand} expand={expand} className="position-relative py-5 d-flex justify-content-between" data-bs-theme="dark">
+        <Navbar key={expand} expand={expand} className="position-relative py-lg-5 d-flex justify-content-between" data-bs-theme="dark">
           <Container fluid className="d-flex justify-content-between align-items-center">
             <div className="d-flex justify-content-start flex-grow-1">
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="secondary p-2" />
