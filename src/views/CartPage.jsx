@@ -6,16 +6,12 @@ import CartEmpty from "../components/CartEmpty"
 
 const CartPage = () => {
   const { cartFilter } = useContext(DataContext)
-
   const isCart = cartFilter.length > 0
 
-
-
-
   return (
-    <Container>
+    <>
       {isCart ? <CartDetail /> : <CartEmpty />}
-    </Container>
+    </>
   )
 }
 

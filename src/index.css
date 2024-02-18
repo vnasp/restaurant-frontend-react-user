@@ -46,7 +46,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color:white;
+  color: white;
 }
 
 .navigation {
@@ -82,6 +82,10 @@ a {
   justify-content: center;
   align-items: start;
   position: relative;
+}
+
+.cart-offcanvas {
+  width: 340px !important;
 }
 
 .cart-offcanvas-custom-tittle {
@@ -131,7 +135,15 @@ a {
   padding: 2.25rem 0;
   margin-top: 4rem;
 }
-
+.categories-img {
+  border: 2px solid white;
+  border-radius:1rem;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%, -50%);
+  height:122px;
+}
 .accordion-button,
 .accordion-item,
 .accordion-button:not(.collapsed) {
@@ -211,7 +223,7 @@ a {
 }
 
 .pizza-img {
-  height:250px;
+  height: 250px;
 }
 
 .text-emphasis {
@@ -228,6 +240,7 @@ a {
 .bg-opacity-25 {
   background-color: rgba(0, 0, 0, 0.25);
 }
+
 .badge-red {
   background-color: #df554e;
 }
@@ -274,7 +287,7 @@ a {
 }
 
 .custom-margin-top {
-  margin-top: 5.5rem;
+  margin-top: 0.25rem;
 }
 
 .custom-margin-bottom {
@@ -286,7 +299,7 @@ a {
   border-radius: 20px;
   color: white;
   margin: 0 0.5rem;
-  width:90%;
+  width: 90%;
 }
 
 .custom-popup h2 {
@@ -382,10 +395,16 @@ a {
   .login-icon-custom {
     padding-right: 2rem;
   }
+
   .bg-opacity-25 {
-    background-color:transparent;
+    background-color: transparent;
   }
+
   .pizza-img {
-    height:700px;
+    height: 700px;
+  }
+
+  .custom-margin-top {
+    margin-top: 2.5rem;
   }
 }

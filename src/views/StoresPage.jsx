@@ -37,12 +37,12 @@ const StoresPage = () => {
     location.message.toLowerCase().includes(filterText.toLowerCase())
   );
   return (
-    <Container className="custom-margin-bottom">
-      <h1 className="">Locales</h1>
+    <Container>
+      <h1>Locales</h1>
       <h3 className="text-center pb-4">
-            Nuestra pizzería se destaca por su singular ubicación dentro de parques, ofreciendo a sus clientes no solo una experiencia culinaria excepcional con sus deliciosas pizzas artesanales, sino también un <span>ambiente tranquilo y naturalmente hermoso</span>. Rodeados de exuberante vegetación, caminos serpenteantes y el tranquilo murmullo de la naturaleza, cada local invita a los visitantes a disfrutar de momentos de paz y relajación. Esta combinación única de <span>sabores gourmet y entornos naturales</span> convierte a nuestra pizzería en el destino perfecto para aquellos que buscan escapar del bullicio de la ciudad y sumergirse en una experiencia gastronómica relajante y revitalizante, donde cada bocado se acompaña de vistas impresionantes y aire fresco.</h3>
-      <Row className="card-custom custom-shadow">
-        <Col className="col-4">
+            Nuestra pizzería se destaca por su singular ubicación dentro de parques, ofreciendo a sus clientes una experiencia culinaria y un ambiente tranquilo y naturalmente hermoso. Esta combinación única de <span>sabores gourmet y entornos naturales</span> convierte a nuestra pizzería en el destino perfecto para aquellos que buscan escapar del bullicio de la ciudad y sumergirse en una experiencia gastronómica relajante y revitalizante.</h3>
+      <Row className="flex-column flex-lg-row card-custom custom-shadow custom-margin-bottom mx-1">
+        <Col className="col-md-4">
           <div className="py-4">
             <InputGroup>
               <Form.Control
@@ -65,7 +65,7 @@ const StoresPage = () => {
             ))}
           </div>
         </Col>
-        <Col className="col-8 pe-0"> <MapContainer center={[-33.436746, -70.634436]} zoom={13} style={{ height: '500px', width: '100%' }}>
+        <Col className="col-md-8 px-0 mt-4 mt-lg-0"> <MapContainer center={[-33.436746, -70.634436]} zoom={13} style={{ height: '500px', width: '100%' }}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
