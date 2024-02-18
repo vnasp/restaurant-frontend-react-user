@@ -12,7 +12,7 @@ const PointsPage = () => {
     <Container>
     <h1 className="">MammaPuntos</h1>
       <div className="card-custom custom-shadow custom-margin-bottom">
-        <div className="px-4 mx-4">
+        <div className="px-2 px-lg-4 mx-lg-4">
           <h2 className="text-center pt-4 fs-3">¡Sé parte! Prueba más, ahorra más.</h2>
           <div className="py-4">En pizzería Mamma Mia, queremos agradecer a nuestros clientes su lealtad. Por cada compra, acumula MammaPuntos que puedes canjear por deliciosas recompensas.
           </div>

@@ -22,9 +22,6 @@ function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes añadir la lógica para enviar los datos del formulario, por ejemplo, usando fetch o axios
-    console.log(formData);
-    // Reiniciar el formulario
     setFormData({
       name: '',
       email: '',
@@ -35,13 +32,12 @@ function ContactPage() {
   return (
     <Container className="custom-margin-bottom">
       <h1 className="">Escríbenos</h1>
-
-      <Row className="card-custom custom-shadow rounded-3">
-        <Col className="col-3 p-3 custom-margin-top">
+      <Row className="flex-col flex-md-row card-custom custom-shadow rounded-3">
+        <Col className="col-sm-12 col-md-3 p-3 custom-margin-top">
           <CallUs/>
           <OpeningHours />
         </Col>
-        <Col className="col-6 py-4 pe-4">
+        <Col className="col-sm-12 col-md-6 py-4 pe-4">
           <Card.Title>Formulario de Contacto</Card.Title>
           <Card.Body className="pe-4">
             <Form onSubmit={handleSubmit}>
@@ -87,7 +83,7 @@ function ContactPage() {
             </Form>
           </Card.Body>
         </Col>
-        <Col className="col-3 contact-custom-background">
+        <Col className="col-sm-12 col-md-3 contact-custom-background">
         </Col>
       </Row>
       <h2 className=" fs-1 pt-4 mt-4">Bebestibles</h2>

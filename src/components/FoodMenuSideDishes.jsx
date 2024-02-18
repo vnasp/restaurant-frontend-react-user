@@ -17,7 +17,7 @@ const FoodMenuSideDishes = () => {
 
   return (
     <>
-      <div id="sideDishesMenu" className="py-4 my-4">
+      <div id="sideDishesMenu" className="py-4">
         <Form onSubmit={handleSubmit}>
           <Row xs={1} md={2} lg={4} className="g-4">
             {sideDishes.map((sidedish) => (

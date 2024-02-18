@@ -285,6 +285,8 @@ a {
   background-color: #df554e;
   border-radius: 20px;
   color: white;
+  margin: 0 0.5rem;
+  width:90%;
 }
 
 .custom-popup h2 {
@@ -307,7 +309,6 @@ a {
 .nav-link {
   background-color: #fcfcfc;
   color: gray;
-  margin-left: 1rem;
   border-color: #8bb449;
 }
 
@@ -326,9 +327,7 @@ a {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: rgba(123, 43, 59, 0.5);
-
 }
-
 
 .login-with-google-btn {
   background-color: #4285F4;

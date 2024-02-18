@@ -24,14 +24,14 @@ const HomePage = () => {
         </Row>
       </div>
       <Container>
-        <div className="text-center  pb-4 mb-4">
+        <div className="text-center mb-4">
           <h1 >Bienvenidos a Mamma Mia</h1>
           <h3>Somos una pizzería gourmet donde la <span>tradición y la innovación</span> se encuentran para ofrecerles una experiencia culinaria inolvidable. Nuestras pizzas artesanales están hechas con ingredientes de la más alta calidad, seleccionados cuidadosamente para brindarles <span>sabores auténticos y memorables</span>.
             Desde las clásicas recetas italianas hasta <span>creaciones únicas</span> de nuestra casa, cada pizza es una obra de arte cocida a la perfección en horno de leña.
             Pide tu pizza y descubre por qué somos la elección predilecta de los amantes de la pizza gourmet.</h3>
         </div>
         <FoodMenuCategories />
-        <h2 className=" fs-1 pt-4 mt-4">Pizzas Artesanales</h2>
+        <h2 className=" fs-1 mt-4">Pizzas Artesanales</h2>
         <FoodMenuPizzas />
         <h2 className=" fs-1 pt-4 mt-4">Acompañamientos</h2>
         <FoodMenuSideDishes />

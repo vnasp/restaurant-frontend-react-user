@@ -42,6 +42,7 @@ const PizzaPage = () => {
         <Card.Img variant="top" src={pizzas[pizzaIndex].img} className="pizza-img"/>
       </Card>
       <div>
+      <h2 className=" fs-1 pt-4 mt-4">Bebestibles</h2>
         <FoodMenuBeverages/>
       </div>
     </Container>

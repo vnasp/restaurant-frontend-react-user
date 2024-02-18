@@ -6,10 +6,9 @@ import NotFound from "./views/NotFound"
 import PointsPage from "./views/PointsPage"
 import ContactPage from "./views/ContactPage"
 import StoresPage from "./views/StoresPage"
+import MenuPage from "./views/MenuPage"
 import Navigation from "./components/Navigation"
 import FooterPage from "./components/FooterPage"
-import FoodMenu from "./components/FoodMenu"
-import OrderPage from "./views/OrderPage"
 
 const App = () => {
   return (
@@ -22,10 +21,7 @@ const App = () => {
         />
         <Route
           path="/menu"
-          element={<FoodMenu />} />
-        <Route
-          path="/menu"
-          element={<OrderPage />} />
+          element={<MenuPage />} />
         <Route
           path="/carrito"
           element={<CartPage />}
