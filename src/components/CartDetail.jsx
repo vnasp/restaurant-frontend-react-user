@@ -109,7 +109,7 @@ const CartDetail = () => {
       <hr/>
       <Card className="card-custom pb-4">
             <Card.Body>
-              <Card.Title className="text-white">Detalles de Entrega</Card.Title>
+              <Card.Title className="">Detalles de Entrega</Card.Title>
                 <Form.Group className="mb-3" controlId="formAddress">
                   <InputGroup>
                     <InputGroup.Text id="basic-addon1"><MdLocationOn /></InputGroup.Text>

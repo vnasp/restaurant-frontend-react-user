@@ -2,7 +2,6 @@ import OpeningHours from "./OpeningHours"
 import CallUs from "./CallUs"
 import SocialMedia from "./SocialMedia"
 import { Row, Col, Image } from "react-bootstrap"
-import { Link } from "react-router-dom"
 
 const FooterPage = () => {
   return (
@@ -10,28 +9,20 @@ const FooterPage = () => {
       <div className="position-relative mt-4">
         <div className="skewed-footer"></div>
         <div id="footer">
-          <Row className="pt-5 mt-5">
-            <Col className="col-sm-0 col-md-5">
+          <Row className="d-flex flex-row align-items-start pt-4 text-center">
+            <Col className="mt-4 pt-4">
+              <CallUs />
             </Col>
-            <Col className="col-sm-1 col-md-2 text-white">
-            <CallUs/>
-              <div className="pb-2"><h4>Enlaces de ayuda</h4></div>
-              <div className="d-flex flex-column justify-content-start">
-                <Link to="/contacto" className="mb-2 text-white">Escríbenos</Link>
-                <Link to="/contacto" className="mb-2 text-white">Trabaja con Nosotros</Link>
-                <Link to="/contacto" className="mb-2 text-white">Sugerencias</Link>
-              </div>
+            <Col className="mt-4 pt-4">
+            <OpeningHours />
             </Col>
-            <Col className="col-sm-1 col-md-2">
-              <OpeningHours />
-            </Col>
-            <Col className="col-sm-1 col-md-2 d-flex flex-column justify-content-start align-items-center">
-              <Image src="/assets/img/logo_white.png" width={100} className="mb-4" />
+            <Col className="mt-4 pt-4">
               <SocialMedia />
-              <div className="pt-5">
-                <div className="text-white mb-4"><span className="badge-red p-1 me-2">UX/UI</span> Natalia Muñoz</div>
-                <div className="text-white mb-2"><span className="badge-red p-1 me-2">FRONTEND</span> Valentina Muñoz</div>
-              </div>
+              <div className="my-4"><span className="badge-red p-1 me-2">UX/UI</span> Natalia Muñoz</div>
+              <div className="mb-2"><span className="badge-red p-1 me-2">FRONTEND</span> Valentina Muñoz</div>
+            </Col>
+            <Col className="mt-4 pt-4">
+              <Image src="/assets/img/logo_white.png" width={200}/>
             </Col>
           </Row>
         </div>

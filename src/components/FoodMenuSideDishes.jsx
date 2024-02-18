@@ -22,7 +22,7 @@ const FoodMenuSideDishes = () => {
           <Row xs={1} md={2} lg={4} className="g-4">
             {sideDishes.map((sidedish) => (
               <Col key={sidedish.id}>
-                <Card className="card-custom custom-shadow border-0 mx-4 mx-lg-0">
+                <Card className="card-custom custom-shadow border-0 mx-2 mx-lg-0">
                   <Card.Img variant="top" src={sidedish.img} height={200} />
                   <Card.Body>
                     <Card.Title className="text-capitalize"><h4>{sidedish.name}</h4></Card.Title>

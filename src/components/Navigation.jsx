@@ -15,9 +15,9 @@ const Navigation = () => {
 
 
   return (
-    <div className={isHome ? 'navigation p-4' : 'p-4 mb-4'}>
+    <div className={isHome ? 'navigation py-4' : 'py-4 mb-4'}>
       {[false].map((expand) => (
-        <Navbar key={expand} expand={expand} className="position-relative py-lg-5 d-flex justify-content-between" data-bs-theme="dark">
+        <Navbar key={expand} expand={expand} className="position-relative py-lg-5 px-lg-5" data-bs-theme="dark">
           <Container fluid className="d-flex justify-content-between align-items-center">
             <div className="d-flex justify-content-start flex-grow-1">
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="secondary p-2" />
@@ -29,12 +29,12 @@ const Navigation = () => {
               >
                 <Offcanvas.Header closeButton className="menu-offcanvas-custom-tittle">
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                    <Navbar.Brand href="/"><Image src="/assets/img/logo_white.png" className="w-sm-25 " /></Navbar.Brand>
+                    <Navbar.Brand href="/"><Image src="/assets/img/logo_white.png" width={80} /></Navbar.Brand>
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className="d-flex flex-column justify-content-between ms-4">
                   <div className="watermark">MammaMia</div>
-                  <Nav className="d-flex flex-column fs-4 text-white mb-5 pb-5">
+                  <Nav className="d-flex flex-column fs-4  mb-5 pb-5">
                     <NavLink to="/menu" onClick={() => setMenuShow(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-basket pe-3"></i> Pide Online
@@ -61,10 +61,9 @@ const Navigation = () => {
               </Navbar.Offcanvas>
             </div>
             <div className="position-absolute top-50 start-50 translate-middle">
-              <Navbar.Brand href="/" className="mx-auto"><Image src="/assets/img/logo_white.png" width={180} /></Navbar.Brand>
+              <Navbar.Brand href="/"><Image src="/assets/img/logo_white.png" className="logo-sm logo-lg" /></Navbar.Brand>
             </div>
             <div className="d-flex justify-content-end">
-
               <div className="fs-1">
                 <a onClick={handleInscribeClick}>
                   <i className="bi bi-person-fill login-icon-custom"></i>
@@ -73,8 +72,7 @@ const Navigation = () => {
               <Button
                 onClick={handleShowCart}
                 id="carrito"
-                className="text-white btn secondary d-flex align-items-center justify-content-center">
-
+                className=" btn secondary d-flex align-items-center justify-content-center">
                 <i className="bi bi-basket pe-2"></i>
                 {CLP.format(total)}
               </Button>

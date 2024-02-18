@@ -8,7 +8,7 @@ const CartEmpty = () => {
         <Col className="d-flex flex-column align-items-center mt-4 pt-4">
           <h2>Tu carrito</h2>
           <h2>está vacío</h2>
-          <h3 className="text-white fs-4">¡Falta pizza en tu vida!</h3>
+          <h3 className=" fs-4">¡Falta pizza en tu vida!</h3>
             <Link to="/menu">
               <Button className="btn secondary fs-4 my-4"
               >Pide tu pizza

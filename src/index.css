@@ -6,7 +6,7 @@
 body {
   background-color: #df554e;
   font-family: 'Lato', sans-serif;
-  color:white;
+  color: white;
   font-size: 16px;
   width: 100vw;
 }
@@ -67,6 +67,10 @@ a {
   height: 500px;
 }
 
+.logo-sm {
+  width: 100px;
+}
+
 .offcanvas-custom {
   width: 340px !important;
   background-color: #df554e;
@@ -112,6 +116,19 @@ a {
   transform: rotate(-90deg);
   /* Rota el texto para que sea vertical */
   font-family: 'Satisfy', serif;
+}
+
+.categories-box {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+  padding: 2.25rem 0;
+  margin-top: 4rem;
 }
 
 .accordion-button,
@@ -164,7 +181,7 @@ a {
 
 .login-icon-custom {
   color: #8bb449;
-  padding-right: 2rem;
+  padding-right: 0.5rem;
 }
 
 .link-active {
@@ -200,9 +217,7 @@ a {
   background-image: url("/assets/img/background-footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
-  border-top: #7B2B3B;
-  border: 2px solid;
+  height: 400px;
 }
 
 .badge-red {
@@ -236,7 +251,7 @@ a {
   right: 0;
   left: 0;
   width: 100%;
-  height: 5%;
+  height: 10%;
   background: #df554e;
   z-index: 0;
   transform: skewY(-1deg);
@@ -344,10 +359,20 @@ a {
   h1 {
     font-size: 5rem;
   }
+
   h2 {
     font-size: 4rem;
   }
+
   .header-custom-background {
     height: 800px;
+  }
+
+  .logo-lg {
+    width: 200px;
+  }
+
+  .login-icon-custom {
+    padding-right: 2rem;
   }
 }

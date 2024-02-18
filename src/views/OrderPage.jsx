@@ -8,7 +8,7 @@ const OrderPage = () => {
     <Container className="pb-2 mb-2">
       <Row className="mb-2">
         <Col>
-          <h1 className="text-white text-center">Haz tu Pedido</h1>
+          <h1 className=" text-center">Haz tu Pedido</h1>
         </Col>
       </Row>
       <Row>
@@ -21,7 +21,7 @@ const OrderPage = () => {
         <Col md={4}>
           <Card className="card-custom">
             <Card.Body>
-              <Card.Title className="text-white">Detalles de Entrega</Card.Title>
+              <Card.Title className="">Detalles de Entrega</Card.Title>
                 <Form.Group className="mb-3" controlId="formAddress">
                   <InputGroup>
                     <InputGroup.Text id="basic-addon1"><MdLocationOn /></InputGroup.Text>

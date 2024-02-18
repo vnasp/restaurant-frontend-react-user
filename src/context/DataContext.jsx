@@ -26,7 +26,7 @@ const DataProvider = ({ children }) => {
     MySwal.fire({
       title: '<h2>Ingresa a Mamma Mia</h2>',
       html: `
-        <p class="text-white">Acumula MammaPuntos, revisa tus pedidos y pizzas favoritas.</p>
+        <p class="">Acumula MammaPuntos, revisa tus pedidos y pizzas favoritas.</p>
         <button type="button" class="login-with-google-btn">Ingresa con Google</button>
       `,
       showConfirmButton: false,

@@ -29,7 +29,7 @@ const PizzaPage = () => {
             </Card.Text>
             <div className="d-flex text-secondary text-capitalize mb-4 pb-4">
               {pizzas[pizzaIndex].ingredients.map((ingredient, index) => (
-                <p key={index} className="badge-red rounded-3 text-white px-2 py-1 me-2">
+                <p key={index} className="badge-red rounded-3  px-2 py-1 me-2">
                   {ingredient}
                 </p>
               ))}

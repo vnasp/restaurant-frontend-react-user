@@ -8,8 +8,8 @@ const FoodMenu = () => {
 
   return (
     <Container>
-      <h1 className="text-white">Haz tu pedido</h1>
-        <Card className="bg-transparent text-white border-0 rounded-xl">
+      <h1 className="">Haz tu pedido</h1>
+        <Card className="bg-transparent  border-0 rounded-xl">
         <Tabs defaultActiveKey="tab1" id="uncontrolled-tab-example">
           <Tab eventKey="tab1" title={<span className="nav-title">Pizzas Artesanales</span>} className="px-3">
             <FoodMenuPizzas/>

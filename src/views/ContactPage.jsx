@@ -34,7 +34,7 @@ function ContactPage() {
 
   return (
     <Container className="custom-margin-bottom">
-      <h1 className="text-white">Escríbenos</h1>
+      <h1 className="">Escríbenos</h1>
 
       <Row className="card-custom custom-shadow rounded-3">
         <Col className="col-3 p-3 custom-margin-top">
@@ -90,7 +90,7 @@ function ContactPage() {
         <Col className="col-3 contact-custom-background">
         </Col>
       </Row>
-      <h2 className="text-white fs-1 pt-4 mt-4">Bebestibles</h2>
+      <h2 className=" fs-1 pt-4 mt-4">Bebestibles</h2>
       <FoodMenuBeverages/>
     </Container>
 

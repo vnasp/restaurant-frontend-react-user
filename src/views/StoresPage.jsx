@@ -38,7 +38,7 @@ const StoresPage = () => {
   );
   return (
     <Container className="custom-margin-bottom">
-      <h1 className="text-white">Locales</h1>
+      <h1 className="">Locales</h1>
       <h3 className="text-center pb-4">
             Nuestra pizzería se destaca por su singular ubicación dentro de parques, ofreciendo a sus clientes no solo una experiencia culinaria excepcional con sus deliciosas pizzas artesanales, sino también un <span>ambiente tranquilo y naturalmente hermoso</span>. Rodeados de exuberante vegetación, caminos serpenteantes y el tranquilo murmullo de la naturaleza, cada local invita a los visitantes a disfrutar de momentos de paz y relajación. Esta combinación única de <span>sabores gourmet y entornos naturales</span> convierte a nuestra pizzería en el destino perfecto para aquellos que buscan escapar del bullicio de la ciudad y sumergirse en una experiencia gastronómica relajante y revitalizante, donde cada bocado se acompaña de vistas impresionantes y aire fresco.</h3>
       <Row className="card-custom custom-shadow">
@@ -77,7 +77,7 @@ const StoresPage = () => {
           ))}
         </MapContainer></Col>
       </Row>
-      <h2 className="text-white fs-1 pt-4 mt-4">Acompañamientos</h2>
+      <h2 className=" fs-1 pt-4 mt-4">Acompañamientos</h2>
       <FoodMenuSideDishes />
     </Container>
   );
