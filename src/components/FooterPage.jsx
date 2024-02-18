@@ -11,7 +11,7 @@ const FooterPage = () => {
         <div className="skewed-footer"></div>
         <div id="footer">
           <Row className="pt-5 mt-5">
-            <Col className="col-md-5">
+            <Col className="col-md-5 d-sm-none">
             </Col>
             <Col className="col-md-2 text-white">
             <CallUs/>

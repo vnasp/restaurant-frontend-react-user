@@ -29,7 +29,7 @@ const Navigation = () => {
               >
                 <Offcanvas.Header closeButton className="menu-offcanvas-custom-tittle">
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                    <Navbar.Brand href="/"><Image src="/assets/img/logo_white.png" width={80} /></Navbar.Brand>
+                    <Navbar.Brand href="/"><Image src="/assets/img/logo_white.png" className="img-fluid" /></Navbar.Brand>
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className="d-flex flex-column justify-content-between ms-4">

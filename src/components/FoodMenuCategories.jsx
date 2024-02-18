@@ -9,7 +9,7 @@ const FoodMenuCategories = () => {
         <a href="#pizzasMenu" className="text-white">
           <Image src="https://as1.ftcdn.net/v2/jpg/01/44/16/30/1000_F_144163074_2GIzTmGuL3gAJZEtvWXxMdOk7FiasIIl.jpg"
             height={120} className="border border-2 border-white rounded-3 position-absolute top-0 start-50 translate-middle" />
-          <div className="fs-4 mt-4 pt-4">
+          <div className="fs-4 mx-4 pt-4">
             Pizzas <span className="text-emphasis">Artesanales</span>
           </div>
         </a>

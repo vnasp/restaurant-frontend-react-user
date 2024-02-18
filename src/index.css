@@ -12,7 +12,7 @@ body {
 
 h1 {
   font-family: 'Satisfy', serif;
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: 800;
 }
 
@@ -64,7 +64,7 @@ a {
   background-image: url("/assets/img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
+  height: 400px;
 }
 
 .offcanvas-custom {
@@ -192,10 +192,10 @@ a {
   box-shadow: rgba(123, 43, 59, 0.5) 0px 10px 20px, rgba(123, 43, 59, 0.5) 0px 6px 6px;
 }
 
-.text-emphasis
-{
-  color:#df554e
+.text-emphasis {
+  color: #df554e
 }
+
 #footer {
   background-image: url("/assets/img/background-footer.jpg");
   background-repeat: no-repeat;
@@ -249,6 +249,7 @@ a {
   background-size: cover;
   width: 330px;
 }
+
 .custom-margin-top {
   margin-top: 5.5rem;
 }
@@ -276,16 +277,17 @@ a {
 
 .nav {
   background-color: #df554e;
-  display:flex;
+  display: flex;
   justify-content: end;
 }
 
 .nav-link {
   background-color: #fcfcfc;
   color: gray;
-  margin-left:1rem;
-  border-color:#8bb449;
+  margin-left: 1rem;
+  border-color: #8bb449;
 }
+
 .nav-tabs {
   border-bottom: 4px solid #8bb449;
 }
@@ -296,10 +298,11 @@ a {
   color: white;
   border-color: #8bb449;
 }
-.tab-content>.active{
- border-bottom-left-radius: 15px;
- border-bottom-right-radius: 15px;
- background-color: rgba(123, 43, 59, 0.5);
+
+.tab-content>.active {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: rgba(123, 43, 59, 0.5);
 
 }
 
@@ -334,5 +337,14 @@ a {
       0 -1px 0 rgba(0, 0, 0, .04),
       0 2px 4px rgba(0, 0, 0, .25),
       0 0 0 3px #c8dafc;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .header-custom-background {
+    height: 800px;
   }
 }
