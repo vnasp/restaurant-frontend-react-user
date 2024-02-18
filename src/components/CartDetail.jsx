@@ -126,7 +126,7 @@ const CartDetail = () => {
           <DeliveryTimeSelect />
         </Card.Body>
       </Card>
-      <Button className="btn secondary w-100 fs-4" type="button" href="/">Crear Orden</Button>
+      <Button className="btn secondary w-100 fs-4" type="button" href="./">Crear Orden</Button>
       <Row className="pt-4 text-secondary text-center">
         <Col>Acumulas <i className="bi bi-star"></i> {cart_mamapuntos} MammaPuntos</Col>
       </Row>

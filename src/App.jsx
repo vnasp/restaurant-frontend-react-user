@@ -16,30 +16,30 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route
-          path="/"
+          path="./"
           element={<HomePage />}
         />
         <Route
-          path="/menu"
+          path="./menu"
           element={<MenuPage />} />
         <Route
-          path="/carrito"
+          path="./carrito"
           element={<CartPage />}
         />
         <Route
-          path="/puntos"
+          path="./puntos"
           element={<PointsPage />}
         />
         <Route
-          path="/contacto"
+          path="./contacto"
           element={<ContactPage />}
         />
         <Route
-          path="/locales"
+          path="./locales"
           element={<StoresPage />}
         />
         <Route
-          path="/pizzas/:pizzaId"
+          path="./pizzas/:pizzaId"
           element={<PizzaPage />}
         />
         <Route

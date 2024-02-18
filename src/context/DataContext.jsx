@@ -50,7 +50,7 @@ const DataProvider = ({ children }) => {
   // Obtener la data de los productos
   const getPizzas = async () => {
     try {
-      const response = await fetch("/pizzas.json")
+      const response = await fetch("./pizzas.json")
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -67,7 +67,7 @@ const DataProvider = ({ children }) => {
 
   const getSideDishes = async () => {
     try {
-      const response = await fetch("/sidedishes.json")
+      const response = await fetch("./sidedishes.json")
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -84,7 +84,7 @@ const DataProvider = ({ children }) => {
 
   const getBeverages = async () => {
     try {
-      const response = await fetch("/beverages.json")
+      const response = await fetch("./beverages.json")
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }

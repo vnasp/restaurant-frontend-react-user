@@ -9,7 +9,7 @@ const CartEmpty = () => {
           <h2>Tu carrito</h2>
           <h2>está vacío</h2>
           <h3 className=" fs-4">¡Falta pizza en tu vida!</h3>
-            <Link to="/menu">
+            <Link to="./menu">
               <Button className="btn secondary fs-4 my-4"
               >Pide tu pizza
               </Button>

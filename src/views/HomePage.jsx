@@ -13,7 +13,7 @@ const HomePage = () => {
           <Col className="col-sm-1 col-md-6 text-center">
             <h2>Pizzería Gourmet</h2>
             <h3 className="px-sm-4">Tradicionales y simples, pero con el sabor de generaciones</h3>
-            <Link to="/menu">
+            <Link to="./menu">
               <Button className="btn secondary fs-4"
               >Pide tu pizza
               </Button>

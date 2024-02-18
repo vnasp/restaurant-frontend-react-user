@@ -8,8 +8,8 @@ import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 import { Container, Row, Col, InputGroup, Form, Button } from 'react-bootstrap';
 
 const customIcon = L.icon({
-  iconUrl: '/assets/img/iconLocation.png',
-  shadowUrl: '/assets/img/iconShadow.png',
+  iconUrl: './assets/img/iconLocation.png',
+  shadowUrl: './assets/img/iconShadow.png',
   iconSize: [38, 54], // Tamaño del icono
   shadowSize: [50, 15], // Tamaño de la sombra
   iconAnchor: [19, 54], // Punto del icono que corresponderá a la ubicación del marcador
