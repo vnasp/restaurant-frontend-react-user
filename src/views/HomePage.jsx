@@ -9,23 +9,19 @@ const HomePage = () => {
   return (
     <>
       <div className="position-relative mb-3">
-        <div className="header-custom-background px-5 py-4">
-          <Row className="align-items-end pt-5 mt-5">
-            <Col className="col-md-5 text-center text-white">
-              <div className="pb-4 header-custom-padding">
-                <h2>Pizzería Gourmet</h2>
-                <h3>Tradicionales y simples, pero con el sabor de generaciones</h3>
-              </div>
-              <Link to="/menu">
-                <Button className="btn secondary fs-4"
-                >Pide tu pizza
-                </Button>
-              </Link>
-            </Col>
-          </Row>
-        </div>
-        <div className="skewed-header">
-        </div>
+        <Row className="d-flex align-items-center header-custom-background">
+          <Col className="col-sm-1 col-md-6 text-center">
+            <h2>Pizzería Gourmet</h2>
+            <h3 className="px-sm-4">Tradicionales y simples, pero con el sabor de generaciones</h3>
+            <Link to="/menu">
+              <Button className="btn secondary fs-4"
+              >Pide tu pizza
+              </Button>
+            </Link>
+          </Col>
+        </Row>
+        <Row className="skewed-header">
+        </Row>
       </div>
       <Container>
         <div className="text-center text-white pb-4 mb-4">

@@ -11,9 +11,9 @@ const FooterPage = () => {
         <div className="skewed-footer"></div>
         <div id="footer">
           <Row className="pt-5 mt-5">
-            <Col className="col-md-5 d-sm-none">
+            <Col className="col-sm-0 col-md-5">
             </Col>
-            <Col className="col-md-2 text-white">
+            <Col className="col-sm-1 col-md-2 text-white">
             <CallUs/>
               <div className="pb-2"><h4>Enlaces de ayuda</h4></div>
               <div className="d-flex flex-column justify-content-start">
@@ -22,10 +22,10 @@ const FooterPage = () => {
                 <Link to="/contacto" className="mb-2 text-white">Sugerencias</Link>
               </div>
             </Col>
-            <Col className="col-md-2">
+            <Col className="col-sm-1 col-md-2">
               <OpeningHours />
             </Col>
-            <Col className="col-md-2 d-flex flex-column justify-content-start align-items-center">
+            <Col className="col-sm-1 col-md-2 d-flex flex-column justify-content-start align-items-center">
               <Image src="/assets/img/logo_white.png" width={100} className="mb-4" />
               <SocialMedia />
               <div className="pt-5">
