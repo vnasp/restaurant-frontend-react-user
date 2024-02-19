@@ -1,7 +1,15 @@
 import { Row, Col, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { DataContext } from "../context/DataContext"
 
 const CartEmpty = () => {
+  const { setShowCart } = useContext(DataContext)
+
+  const handleClick = (e) => {
+  setShowCart(false)
+  }
+
   return (
     <>
       <Row>
@@ -9,7 +17,7 @@ const CartEmpty = () => {
           <h2>Tu carrito</h2>
           <h2>está vacío</h2>
           <h3 className=" fs-4">¡Falta pizza en tu vida!</h3>
-            <Link to="./menu">
+            <Link to="/menu" onClick={handleClick}>
               <Button className="btn secondary fs-4 my-4"
               >Pide tu pizza
               </Button>

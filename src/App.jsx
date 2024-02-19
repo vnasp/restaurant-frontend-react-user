@@ -7,6 +7,7 @@ import PointsPage from "./views/PointsPage"
 import ContactPage from "./views/ContactPage"
 import StoresPage from "./views/StoresPage"
 import MenuPage from "./views/MenuPage"
+import ConfirmationPage from "./views/ConfirmationPage"
 import Navigation from "./components/Navigation"
 import FooterPage from "./components/FooterPage"
 
@@ -16,32 +17,37 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route
-          path="./"
+          path="/"
           element={<HomePage />}
         />
         <Route
-          path="./menu"
+          path="/menu"
           element={<MenuPage />} />
         <Route
-          path="./carrito"
+          path="/carrito"
           element={<CartPage />}
         />
         <Route
-          path="./puntos"
+          path="/puntos"
           element={<PointsPage />}
         />
         <Route
-          path="./contacto"
+          path="/contacto"
           element={<ContactPage />}
         />
         <Route
-          path="./locales"
+          path="/locales"
           element={<StoresPage />}
         />
         <Route
-          path="./pizzas/:pizzaId"
+          path="/confirmacion"
+          element={<ConfirmationPage />}
+        />
+        <Route
+          path="/pizzas/:pizzaId"
           element={<PizzaPage />}
         />
+
         <Route
           path="*"
           element={<NotFound />}

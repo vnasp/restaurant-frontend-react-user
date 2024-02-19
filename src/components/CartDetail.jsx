@@ -1,18 +1,19 @@
 import { useContext, useRef, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { Row, Col, Accordion, Image, Button, Form, InputGroup, Card } from "react-bootstrap"
 import { DataContext } from "../context/DataContext"
 import { FaCheck, FaTimes } from "react-icons/fa"
-import { MdLocationOn } from 'react-icons/md'
-import DeliveryTimeSelect from "./DeliveryTimeSelect"
+import DeliveryData from "./DeliveryData"
 
 
 const CartDetail = () => {
-  const { CLP, subtotal, total, cart, setCart, cartFilter, discountAmount, coupon, setCoupon } = useContext(DataContext)
-  const cart_mamapuntos = Math.trunc(total / 100)
+  const { CLP, subtotal, total, cart, setCart, cartFilter, discountAmount, coupon, setCoupon, setShowCart } = useContext(DataContext)
+  const rewardsPoints = Math.trunc(total / 100)
   const inputRef = useRef(null);
   const [activeKey, setActiveKey] = useState("1");
+  const navigate = useNavigate()
 
-  const toggleActiveKey = (key) => {
+  const toggleCoupon = (key) => {
     setActiveKey(activeKey === key ? "" : key);
   };
 
@@ -36,6 +37,17 @@ const CartDetail = () => {
     const updateCart = [...cart]
     updateCart[cartIndex] = { ...updateCart[cartIndex], qty: updateCart[cartIndex].qty - 1 }
     setCart(updateCart)
+  }    
+
+  const handleCreateOrder = () => {
+  const orderDetails = {
+    deliveryAddress,
+    total
+  };
+  setOrderDetails(orderDetails)
+  setCart([])
+  setShowCart(false)
+  navigate(`/confirmacion/`)
   }
 
   return (
@@ -81,7 +93,7 @@ const CartDetail = () => {
       <Form onSubmit={handleSubmit}>
         <Accordion className="mb-4" activeKey={activeKey} flush>
           <Accordion.Item eventKey="0">
-            <Accordion.Header className="fs-6" onClick={() => toggleActiveKey("0")}> ¿Tienes un cupón de descuento? {activeKey === "0" ? <i className="bi bi-chevron-up ms-2"></i> : <i className="bi bi-chevron-down ms-2"></i>}
+            <Accordion.Header className="fs-6" onClick={() => toggleCoupon("0")}> ¿Tienes un cupón de descuento? {activeKey === "0" ? <i className="bi bi-chevron-up ms-2"></i> : <i className="bi bi-chevron-down ms-2"></i>}
             </Accordion.Header>
             <Accordion.Body>
               <InputGroup className="mb-3">
@@ -112,23 +124,12 @@ const CartDetail = () => {
       <Card className="card-custom pb-4">
         <Card.Body>
           <Card.Title className="">Detalles de Entrega</Card.Title>
-          <Form.Group className="mb-3" controlId="formAddress">
-            <InputGroup>
-              <InputGroup.Text id="basic-addon1"><MdLocationOn /></InputGroup.Text>
-              <Form.Control
-                placeholder="Dirección de entrega"
-                aria-label="address"
-                aria-describedby="basic-addon1"
-              />
-            </InputGroup>
-          </Form.Group>
-
-          <DeliveryTimeSelect />
+          <DeliveryData required />
         </Card.Body>
       </Card>
-      <Button className="btn secondary w-100 fs-4" type="button" href="./">Crear Orden</Button>
+      <Button className="btn secondary w-100 fs-4" type="button" onClick={handleCreateOrder}>Crear Orden</Button>
       <Row className="pt-4 text-secondary text-center">
-        <Col>Acumulas <i className="bi bi-star"></i> {cart_mamapuntos} MammaPuntos</Col>
+        <Col>Acumulas <i className="bi bi-star"></i> {rewardsPoints} MammaPuntos</Col>
       </Row>
     </>
   )

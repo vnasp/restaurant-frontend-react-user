@@ -5,7 +5,8 @@ import { DataContext } from "../context/DataContext"
 import FoodMenuBeverages from "../components/FoodMenuBeverages"
 
 const PizzaPage = () => {
-  const { pizzas, addToCart, CLP } = useContext(DataContext)
+  const { pizzas, addToCart , CLP } = useContext(DataContext)
+
   const { pizzaId } = useParams()
   const id = parseInt(pizzaId, 10);
 

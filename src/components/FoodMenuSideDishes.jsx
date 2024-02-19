@@ -1,18 +1,12 @@
-import { useContext, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useContext } from "react"
 import { Form, Col, Row, Card, Button } from "react-bootstrap"
 import { DataContext } from "../context/DataContext"
 
 const FoodMenuSideDishes = () => {
   const { sideDishes, addToCart, CLP } = useContext(DataContext)
-  const [sidedishSelected, setSideDishSelected] = useState('')
-
-  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-
     e.preventDefault()
-    navigate(`/sidedish/${sidedishSelected}/`)
   }
 
   return (

@@ -5,14 +5,9 @@ import { DataContext } from "../context/DataContext"
 
 const FoodMenuBeverages = () => {
   const { beverages, addToCart, CLP } = useContext(DataContext)
-  const [beverageSelected, setBeverageSelected] = useState('')
-
-  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-
     e.preventDefault()
-    navigate(`/beverage/${beverageSelected}/`)
   }
 
   return (

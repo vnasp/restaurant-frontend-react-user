@@ -1,4 +1,4 @@
-import SocialMedia from "./SocialMedia"
+import SocialMedia from "./Addons-SocialMedia"
 import CartDetail from "./CartDetail"
 import CartEmpty from "./CartEmpty"
 import { useContext } from "react"
@@ -35,23 +35,23 @@ const Navigation = () => {
                 <Offcanvas.Body className="d-flex flex-column justify-content-between ms-4">
                   <div className="watermark">MammaMia</div>
                   <Nav className="d-flex flex-column fs-4  mb-5 pb-5">
-                    <NavLink to="./menu" onClick={() => setMenuShow(false)}
+                    <NavLink to="./menu" onClick={() => setShowMenu(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-basket pe-3"></i> Pide Online
                     </NavLink>
-                    <NavLink to="./locales" onClick={() => setMenuShow(false)}
+                    <NavLink to="./locales" onClick={() => setShowMenu(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-shop pe-3"></i> Locales
                     </NavLink>
 
-                    <NavLink to="./puntos" onClick={() => setMenuShow(false)}
+                    <NavLink to="./puntos" onClick={() => setShowMenu(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-star pe-3"></i> MammaPuntos
                     </NavLink>
                     <a onClick={handleInscribeClick} className="link-inactive">
                       <i className="bi bi-person pe-3"></i> Inscríbete
                     </a>
-                    <NavLink to="./contacto" onClick={() => setMenuShow(false)}
+                    <NavLink to="./contacto" onClick={() => setShowMenu(false)}
                       className={setActiveclassName}
                     > <i className="bi bi-telephone pe-3"></i> Contacto
                     </NavLink>

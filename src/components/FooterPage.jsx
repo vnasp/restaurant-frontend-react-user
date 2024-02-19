@@ -1,6 +1,6 @@
-import OpeningHours from "./OpeningHours"
-import CallUs from "./CallUs"
-import SocialMedia from "./SocialMedia"
+import OpeningHours from "./Addons-OpeningHours"
+import CallUs from "./Addons-CallUs"
+import SocialMedia from "./Addons-SocialMedia"
 import { Row, Col, Image } from "react-bootstrap"
 
 const FooterPage = () => {

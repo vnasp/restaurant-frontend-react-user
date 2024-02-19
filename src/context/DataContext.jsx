@@ -18,6 +18,8 @@ const DataProvider = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
   const handleCloseMenu = () => setShowMenu(false)
   const handleShowMenu = () => setShowMenu(true)
+  const [lastOrder, setLastOrder] = useState(null);
+  
 
   // Popup Registro o Inicio de Sesión
   const handleInscribeClick = (e) => {
@@ -144,7 +146,7 @@ const DataProvider = ({ children }) => {
   const discountAmount = subtotal - (discount * subtotal)
 
   return (
-    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, showCart, setShowCart, handleCloseCart, handleShowCart, showMenu, setShowMenu, handleCloseMenu, handleShowMenu }}>
+    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, showCart, setShowCart, handleCloseCart, handleShowCart, showMenu, setShowMenu, handleCloseMenu, handleShowMenu,lastOrder, setLastOrder }}>
       {children}
     </DataContext.Provider>
   )

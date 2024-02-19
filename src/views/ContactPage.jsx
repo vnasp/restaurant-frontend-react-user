@@ -1,5 +1,5 @@
-import CallUs from "../components/CallUs"
-import OpeningHours from "../components/OpeningHours"
+import CallUs from "../components/Addons-CallUs"
+import OpeningHours from "../components/Addons-OpeningHours"
 import FoodMenuBeverages from "../components/FoodMenuBeverages"
 import { Container, Row, Col, Form, Button, Card, InputGroup, Image } from "react-bootstrap"
 import { useState } from 'react'
@@ -41,7 +41,7 @@ function ContactPage() {
           <h3>Formulario de Contacto</h3>
           <Form onSubmit={handleSubmit}>
             <InputGroup size="lg" className="p-2">
-              <InputGroup.Text id="inputGroup-sizing-lg" className="w-25">Nombre</InputGroup.Text>
+              <InputGroup.Text id="inputGroup-sizing-lg" className="w-20">Nombre</InputGroup.Text>
               <Form.Control
                 aria-label="Large"
                 aria-describedby="inputGroup-sizing-lg"
@@ -54,7 +54,7 @@ function ContactPage() {
               />
             </InputGroup>
             <InputGroup size="lg" className="p-2">
-              <InputGroup.Text id="inputGroup-sizing-lg" className="w-25">Email</InputGroup.Text>
+              <InputGroup.Text id="inputGroup-sizing-lg" className="w-20">Email</InputGroup.Text>
               <Form.Control
                 aria-label="Large"
                 aria-describedby="inputGroup-sizing-lg"
@@ -67,7 +67,7 @@ function ContactPage() {
               />
             </InputGroup>
             <InputGroup size="lg" className="p-2 mb-2">
-              <InputGroup.Text id="inputGroup-sizing-lg" className="w-25">Mensaje</InputGroup.Text>
+              <InputGroup.Text id="inputGroup-sizing-lg" className="w-20">Mensaje</InputGroup.Text>
               <Form.Control
                 as="textarea"
                 aria-describedby="textArea-sizing-lg"
