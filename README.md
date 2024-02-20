@@ -18,7 +18,7 @@ Este proyecto está construido utilizando las siguientes tecnologías y bibliote
 
 - **ReactJS**: Se utilizó `useState`, `useRef` para manejar el estado y referencias.
   - **React Router**: Para la navegación dentro de la aplicación (`NavLink`, `useNavigate`, `useParams`).
-  - **React Context API**: Se uzó `useContext` para gestionar el estado global de la aplicación.
+  - **React Context API**: Se usó `useContext` para gestionar el estado global de la aplicación.
   - **Archivos JSON**: Para almacenar datos de productos del menú.
 - **SweetAlert2**: Para pop-ups interactivos, como el formulario de inicio de sesión.
 - **Leaflet**: Para mostrar el mapa de ubicaciones de las tiendas.
