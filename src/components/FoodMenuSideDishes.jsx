@@ -1,9 +1,26 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { Form, Col, Row, Card, Button } from "react-bootstrap"
 import { DataContext } from "../context/DataContext"
 
 const FoodMenuSideDishes = () => {
-  const { sideDishes, addToCart, CLP } = useContext(DataContext)
+  const { sideDishes, setSideDishes, addToCart, CLP } = useContext(DataContext)
+
+  const getSideDishes = async () => {
+    try {
+      const response = await fetch("./sidedishes.json")
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      const data = await response.json()
+      setSideDishes(data)
+    } catch (error) {
+      console.error("Error fetching data: ", error)
+      alert("Error fetching data: " + error.message)
+    }
+  }
+  useEffect(() => {
+    getSideDishes()
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()

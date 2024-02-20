@@ -1,18 +1,35 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { Form, Col, Row, Card, Button } from "react-bootstrap"
 import { DataContext } from "../context/DataContext"
 
 const FoodMenuPizzas = () => {
-  const { pizzas, addToCart, CLP } = useContext(DataContext)
+  const { pizzas, setPizzas, addToCart, CLP } = useContext(DataContext)
   const [pizzaSelected, setPizzaSelected] = useState('')
 
-  const navigate = useNavigate()
+  const getPizzas = async () => {
+    try {
+      const response = await fetch("./pizzas.json")
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      const data = await response.json()
+      setPizzas(data)
+    } catch (error) {
+      console.error("Error fetching data: ", error)
+      alert("Error fetching data: " + error.message)
+    }
+  }
+  useEffect(() => {
+    getPizzas()
+  }, [])
 
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault()
     navigate(`/pizzas/${pizzaSelected}/`)
   }
+
 
   return (
     <>

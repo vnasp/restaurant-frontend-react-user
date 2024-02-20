@@ -1,11 +1,14 @@
 import { useContext, useState } from 'react';
-import { Form, InputGroup } from 'react-bootstrap';
+import { Form, InputGroup, Button } from 'react-bootstrap'
 import { FaMotorcycle } from 'react-icons/fa'
 import { MdLocationOn } from 'react-icons/md'
-import { DataContext } from '../context/DataContext';
+import { DataContext } from '../context/DataContext'
+import { useNavigate } from 'react-router-dom'
 
 function DeliveryData() {
-  const { selectedTime, setSelectedTime, deliveryAddress, setDeliveryAddress, CLP } = useContext(DataContext)
+  const { deliveryAddress, setDeliveryAddress, total, setCart, setShowCart, setOrderDetails } = useContext(DataContext)
+  const [ selectedTime, setSelectedTime] = useState('')
+const navigate = useNavigate()
 
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value);
@@ -25,8 +28,21 @@ function DeliveryData() {
     "21:00 - 23:00"
   ];
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+      const orderDetails = {
+        selectedTime,
+        deliveryAddress,
+        total
+      }
+      setOrderDetails(orderDetails)
+      setCart([])
+      setShowCart(false)
+      navigate(`/confirmacion/`)
+      }
+
   return (
-    <>
+    <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formAddress">
         <InputGroup>
           <InputGroup.Text id="basic-addon1"><MdLocationOn /></InputGroup.Text>
@@ -51,7 +67,8 @@ function DeliveryData() {
           </Form.Select>
         </InputGroup>
       </Form.Group>
-    </>
+      <Button className="btn secondary w-100 fs-4 mt-4" type="submit">Crear Orden</Button>
+    </Form>
   );
 }
 

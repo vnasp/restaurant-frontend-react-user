@@ -1,11 +1,12 @@
 import { useContext, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { Container, Button, Card } from "react-bootstrap"
 import { DataContext } from "../context/DataContext"
 import FoodMenuBeverages from "../components/FoodMenuBeverages"
 
 const PizzaPage = () => {
   const { pizzas, addToCart , CLP } = useContext(DataContext)
+  const navigate = useNavigate()
 
   const { pizzaId } = useParams()
   const id = parseInt(pizzaId, 10);
@@ -18,11 +19,16 @@ const PizzaPage = () => {
     window.scrollTo(0, 220);
   }, []); 
 
+const handleClickBack = () => {
+  navigate('/menu')
+}
+
   return (
     <Container className="py-4 my-2">
       <Card key={pizzas[pizzaIndex].id} className="d-flex flex-column flex-lg-row card-custom custom-shadow overflow-hidden">
         <Card.Body className="px-2 px-lg-4 mx-2 mx-lg-4">
-          <Card.Title className="mb-4 pt-4">
+          <Card.Text className="p-2" onClick={handleClickBack}><i className="bi bi-arrow-left me-1"></i>Volver al Menú</Card.Text>
+          <Card.Title className="mb-4 pt-2">
             <h1 className="text-capitalize">Pizza {pizzas[pizzaIndex].name}</h1>
           </Card.Title>
           <Card.Text className="text-justify">

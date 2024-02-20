@@ -38,18 +38,6 @@ const CartDetail = () => {
     updateCart[cartIndex] = { ...updateCart[cartIndex], qty: updateCart[cartIndex].qty - 1 }
     setCart(updateCart)
   }    
-
-  const handleCreateOrder = () => {
-  const orderDetails = {
-    deliveryAddress,
-    total
-  };
-  setOrderDetails(orderDetails)
-  setCart([])
-  setShowCart(false)
-  navigate(`/confirmacion/`)
-  }
-
   return (
     <>
       {cartFilter.map((item) => (
@@ -123,11 +111,10 @@ const CartDetail = () => {
       <hr />
       <Card className="card-custom pb-4">
         <Card.Body>
-          <Card.Title className="">Detalles de Entrega</Card.Title>
-          <DeliveryData required />
+          <Card.Title>Detalles de Entrega</Card.Title>
+          <DeliveryData />
         </Card.Body>
       </Card>
-      <Button className="btn secondary w-100 fs-4" type="button" onClick={handleCreateOrder}>Crear Orden</Button>
       <Row className="pt-4 text-secondary text-center">
         <Col>Acumulas <i className="bi bi-star"></i> {rewardsPoints} MammaPuntos</Col>
       </Row>

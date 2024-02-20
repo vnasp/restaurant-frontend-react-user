@@ -283,7 +283,7 @@ a {
   background-image: url("../assets/img/background-contact.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 330px;
+  height: 400px;
 }
 
 .custom-margin-top {
@@ -380,8 +380,8 @@ w-20 {
 .confirmation-custom-background{
   background-image: url("../assets/img/background-confirmation.webp");
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 500px;
+  background-size: cover;
+  height: 400px;
 }
 
 @media (min-width: 768px) {
@@ -412,7 +412,6 @@ w-20 {
   .pizza-img {
     height: 700px;
   }
-
   .custom-margin-top {
     margin-top: 2.5rem;
   }

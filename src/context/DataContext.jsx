@@ -18,8 +18,8 @@ const DataProvider = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
   const handleCloseMenu = () => setShowMenu(false)
   const handleShowMenu = () => setShowMenu(true)
-  const [lastOrder, setLastOrder] = useState(null);
-  
+  const [deliveryAddress, setDeliveryAddress] = useState('')
+  const [orderDetails, setOrderDetails] = useState({})
 
   // Popup Registro o Inicio de Sesión
   const handleInscribeClick = (e) => {
@@ -49,65 +49,10 @@ const DataProvider = ({ children }) => {
 
   };
 
-  // Obtener la data de los productos
-  const getPizzas = async () => {
-    try {
-      const response = await fetch("./pizzas.json")
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json()
-      setPizzas(data)
-    } catch (error) {
-      console.error("Error fetching data: ", error)
-      alert("Error fetching data: " + error.message)
-    }
-  }
-  useEffect(() => {
-    getPizzas()
-  }, [])
-
-  const getSideDishes = async () => {
-    try {
-      const response = await fetch("./sidedishes.json")
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json()
-      setSideDishes(data)
-    } catch (error) {
-      console.error("Error fetching data: ", error)
-      alert("Error fetching data: " + error.message)
-    }
-  }
-  useEffect(() => {
-    getSideDishes()
-  }, [])
-
-  const getBeverages = async () => {
-    try {
-      const response = await fetch("./beverages.json")
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json()
-      setBeverages(data)
-    } catch (error) {
-      console.error("Error fetching data: ", error)
-      alert("Error fetching data: " + error.message)
-    }
-  }
-  useEffect(() => {
-    getBeverages()
-  }, [])
-
   // Manejo del carrito
   const addToCart = (item) => {
-    // Destructura el objeto item para obtener el id y el tipo
-    const { id, type } = item;
-
-    // Determina la lista de productos basada en el tipo
-    let productList;
+    const { id, type } = item
+    let productList
     if (type === 'pizza') {
       productList = pizzas;
     } else if (type === 'sidedish') {
@@ -146,7 +91,7 @@ const DataProvider = ({ children }) => {
   const discountAmount = subtotal - (discount * subtotal)
 
   return (
-    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, showCart, setShowCart, handleCloseCart, handleShowCart, showMenu, setShowMenu, handleCloseMenu, handleShowMenu,lastOrder, setLastOrder }}>
+    <DataContext.Provider value={{ pizzas, setPizzas, sideDishes, setSideDishes, beverages, setBeverages, addToCart, cartFilter, cart, setCart, discountAmount, coupon, setCoupon, subtotal, total, CLP, handleInscribeClick, showCart, setShowCart, handleCloseCart, handleShowCart, showMenu, setShowMenu, handleCloseMenu, handleShowMenu, deliveryAddress, setDeliveryAddress,orderDetails, setOrderDetails }}>
       {children}
     </DataContext.Provider>
   )
