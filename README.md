@@ -4,12 +4,12 @@ Bienvenido al repositorio de la Pizzería Gourmet Mamma Mia, un sitio web intera
 
 ## Características 🌟
 
-**Agregar al Carrito**: Interfaz intuitiva para seleccionar pizzas y agregarlas a tu carrito de compras.
-**Cupones de Descuento**: Aplica cupones para obtener descuentos en tus pedidos.
-**Puntos de Recompensa**: Gana puntos con cada compra que puedes canjear por recompensas.
-**Locales de la Tienda**: Encuentra ubicaciones  fácilmente con un mapa interactivo proporcionado por Leaflet.
-**Autenticación de Usuarios**: Regístrate e inicia sesión con un pop-up interactivo gracias a SweetAlert2.
-**Diseño Responsivo**: Navega desde cualquier dispositivo gracias a Bootstrap y CSS personalizado.
+- **Agregar al Carrito**: Interfaz intuitiva para seleccionar pizzas y agregarlas a tu carrito de compras.
+- **Cupones de Descuento**: Aplica cupones para obtener descuentos en tus pedidos.
+- **Puntos de Recompensa**: Gana puntos con cada compra que puedes canjear por recompensas.
+- **Locales de la Tienda**: Encuentra ubicaciones  fácilmente con un mapa interactivo proporcionado por Leaflet.
+- **Autenticación de Usuarios**: Regístrate e inicia sesión con un pop-up interactivo gracias a SweetAlert2.
+- **Diseño Responsivo**: Navega desde cualquier dispositivo gracias a Bootstrap y CSS personalizado.
 
 
 ## Tecnologías Utilizadas 💻
