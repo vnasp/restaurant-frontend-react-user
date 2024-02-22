@@ -39,7 +39,7 @@ const FoodMenuPizzas = () => {
             {pizzas.map((pizza) => (
               <Col key={pizza.id}>
                 <Card className="card-custom custom-shadow border-0 mx-2 mx-lg-0">
-                  <Card.Img variant="top" src={pizza.img} height={200} />
+                  <Card.Img variant="top" src={pizza.img} height={200} onClick={({ target }) => setPizzaSelected(target.value)}/>
                   <Card.Body>
                     <Card.Title className="text-capitalize"><h4>{pizza.name}</h4></Card.Title>
                     <hr></hr>
