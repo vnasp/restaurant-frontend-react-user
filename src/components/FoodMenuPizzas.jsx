@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import { Form, Col, Row, Card, Button } from "react-bootstrap"
+import { useNavigate, Link } from "react-router-dom"
+import { Col, Row, Card, Button } from "react-bootstrap"
 import { DataContext } from "../context/DataContext"
 
 const FoodMenuPizzas = () => {
@@ -25,39 +25,39 @@ const FoodMenuPizzas = () => {
   }, [])
 
   const navigate = useNavigate()
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    navigate(`/pizzas/${pizzaSelected}/`)
-  }
+  const handleNavigate = (pizzaId) => {
+    navigate(`/pizzas/${pizzaId}/`);
+  };
 
 
   return (
     <>
       <div id="pizzasMenu" className="py-4">
-        <Form onSubmit={handleSubmit}>
-          <Row xs={1} md={2} lg={4} className="g-4">
-            {pizzas.map((pizza) => (
-              <Col key={pizza.id}>
-                <Card className="card-custom custom-shadow border-0 mx-2 mx-lg-0">
-                  <Card.Img variant="top" src={pizza.img} height={200} onClick={({ target }) => setPizzaSelected(target.value)}/>
-                  <Card.Body>
-                    <Card.Title className="text-capitalize"><h4>{pizza.name}</h4></Card.Title>
-                    <hr></hr>
-                    <div className="d-flex flex-wrap justify-content-between align-items-center text-secondary text-capitalize">
-                      <div>🍕 {pizza.ingredients.join(', ')}. <Button className="bg-secondary rounded-1 px-1 py-0 fs-6" type="submit" value={pizza.id} onClick={({ target }) => setPizzaSelected(target.value)}>Saber más</Button>
-                      </div>
+        <Row xs={1} md={2} lg={4} className="g-4">
+          {pizzas.map((pizza) => (
+            <Col key={pizza.id}>
+              <Card className="card-custom custom-shadow border-0 mx-2 mx-lg-0">
+                <Link to={`/pizzas/${pizza.id}/`} className="btn btn-link p-0">
+                  <Card.Img variant="top" src={pizza.img} height={200} />
+                </Link>
+                <Card.Body>
+                  <Card.Title className="text-capitalize"><h4>{pizza.name}</h4></Card.Title>
+                  <hr></hr>
+                  <div className="d-flex flex-wrap justify-content-between align-items-center text-secondary text-capitalize">
+                    <div>🍕 {pizza.ingredients.join(', ')}.
+                      <Button className="bg-secondary rounded-1 px-1 py-0 fs-6" type="submit" value={pizza.id} onClick={() => handleNavigate(pizza.id)}>Saber más</Button>
                     </div>
-                  </Card.Body>
-                  <Card.Body className="d-flex justify-content-between align-items-center">
-                    <Card.Text className="fw-bolder fs-2 m-0">{CLP.format(pizza.price)}
-                    </Card.Text>
-                    <Button className="btn secondary" type="button" value={pizza.id} onClick={() => addToCart({ id: pizza.id, type: 'pizza' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Form >
+                  </div>
+                </Card.Body>
+                <Card.Body className="d-flex justify-content-between align-items-center">
+                  <Card.Text className="fw-bolder fs-2 m-0">{CLP.format(pizza.price)}
+                  </Card.Text>
+                  <Button className="btn secondary" onClick={() => addToCart({ id: pizza.id, type: 'pizza' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </div>
     </>
   )
