@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Aros de Cebolla",
+    "img": "/assets/img/sides/side-aros.webp",
+    "desc": "Crujientes aros de cebolla rebozados y fritos lentamente a la perfección.",
+    "price": 4990
+  },
+  {
+    "id": 2,
+    "name": "Palitos de Ajo",
+    "img": "/assets/img/sides/side-palitos.webp",
+    "desc": "Palitos de pan horneados con ajo y mantequilla, con un toque de queso parmesano.",
+    "price": 3990
+  },
+  {
+    "id": 3,
+    "name": "Alitas de Pollo Picantes",
+    "img": "/assets/img/sides/side-alitas.webp",
+    "desc": "Alitas de pollo marinadas y cocidas al horno con nuestra salsa picante especial.",
+    "price": 6990
+  },
+  {
+    "id": 4,
+    "name": "Patatas Bravas",
+    "img": "/assets/img/sides/side-patatas.webp",
+    "desc": "Patatas asadas al horno, aliñadas con especias y servidas con salsa brava y alioli.",
+    "price": 4490
+  }
+]
