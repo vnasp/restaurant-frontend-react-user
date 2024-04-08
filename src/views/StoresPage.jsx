@@ -41,7 +41,7 @@ const StoresPage = () => {
       <h1>Locales</h1>
       <h3 className="text-center pb-4">
             Nuestra pizzería se destaca por su singular ubicación dentro de parques, ofreciendo a sus clientes una experiencia culinaria y un ambiente tranquilo y naturalmente hermoso. Esta combinación única de <span>sabores gourmet y entornos naturales</span> convierte a nuestra pizzería en el destino perfecto para aquellos que buscan escapar del bullicio de la ciudad y sumergirse en una experiencia gastronómica relajante y revitalizante.</h3>
-      <Row className="flex-column flex-lg-row card-custom custom-shadow custom-margin-bottom mx-1">
+      <Row className="flex-column flex-lg-row card-custom custom-shadow mb-5 mx-1">
         <Col className="col-md-4">
           <div className="py-4">
             <InputGroup>
@@ -51,7 +51,7 @@ const StoresPage = () => {
                 aria-describedby="basic-input-filter"
                 onChange={(e) => setFilterText(e.target.value)} // Actualiza el estado con el texto ingresado
               />
-              <Button variant="btn primary">
+              <Button variant="btn btn--primary">
                 Filtrar
               </Button>
             </InputGroup>

@@ -20,20 +20,20 @@ const Navigation = () => {
         <Navbar key={expand} expand={expand} className="position-relative py-lg-5 px-lg-5" data-bs-theme="dark">
           <Container fluid className="d-flex justify-content-between align-items-center">
             <div className="d-flex justify-content-start flex-grow-1">
-              <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="secondary p-2" />
+              <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="btn--secondary p-2" />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                 placement="start"
-                className="offcanvas-custom"
+                className="navigation__offcanvas"
               >
-                <Offcanvas.Header closeButton className="menu-offcanvas-custom-tittle">
+                <Offcanvas.Header closeButton className="menu-navigation__offcanvas-tittle">
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                     <Navbar.Brand href="./"><Image src="./assets/img/logo_white.png" width={80} /></Navbar.Brand>
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className="d-flex flex-column justify-content-between ms-4">
-                  <div className="watermark">MammaMia</div>
+                  <div className="menu__watermark">MammaMia</div>
                   <Nav className="d-flex flex-column fs-4  mb-5 pb-5">
                     <NavLink to="./menu" onClick={() => setShowMenu(false)}
                       className={setActiveclassName}
@@ -61,18 +61,18 @@ const Navigation = () => {
               </Navbar.Offcanvas>
             </div>
             <div className="position-absolute top-50 start-50 translate-middle">
-              <Navbar.Brand href="./"><Image src="./assets/img/logo_white.png" className="logo-sm logo-lg" /></Navbar.Brand>
+              <Navbar.Brand href="./"><Image src="./assets/img/logo_white.png" className="header__logo--sm logo-lg" /></Navbar.Brand>
             </div>
             <div className="d-flex justify-content-end">
               <div className="fs-1">
                 <a onClick={handleInscribeClick}>
-                  <i className="bi bi-person-fill login-icon-custom"></i>
+                  <i className="bi bi-person-fill navigation__login"></i>
                 </a>
               </div>
               <Button
                 onClick={handleShowCart}
                 id="carrito"
-                className=" btn secondary d-flex align-items-center justify-content-center">
+                className=" btn btn--secondary d-flex align-items-center justify-content-center">
                 <i className="bi bi-basket pe-lg-2"></i>
                 <span className="d-none d-md-inline">{CLP.format(total)}</span>
               </Button>
@@ -80,8 +80,8 @@ const Navigation = () => {
           </Container>
         </Navbar>
       ))}
-      <Offcanvas show={showCart} onHide={handleCloseCart} placement="end" className="card-custom cart-offcanvas rounded-0 p-1">
-        <Offcanvas.Header className="cart-offcanvas-custom-tittle" closeButton>
+      <Offcanvas show={showCart} onHide={handleCloseCart} placement="end" className="card-custom cart__offcanvas rounded-0 p-1">
+        <Offcanvas.Header className="cart__title" closeButton>
           <Offcanvas.Title className="fs-4">Tu Pedido</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>

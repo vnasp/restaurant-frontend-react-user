@@ -32,8 +32,8 @@ function ContactPage() {
   return (
     <Container>
       <h1 className="">Escríbenos</h1>
-      <Row className="flex-column flex-lg-row card-custom custom-shadow custom-margin-bottom p-lg-0 mx-1">
-        <Col className="col-12 col-lg-3 p-3 custom-margin-top">
+      <Row className="flex-column flex-lg-row card-custom custom-shadow p-lg-0 mx-1 mb-5">
+        <Col className="col-12 col-lg-3 p-3 mt-5">
           <CallUs />
           <OpeningHours />
         </Col>
@@ -78,7 +78,7 @@ function ContactPage() {
                 required
               />
             </InputGroup>
-            <Button type="submit" className="btn secondary">Enviar</Button>
+            <Button type="submit" className="btn btn--secondary">Enviar</Button>
             {showAlert && (
         <Alert variant="success" onClose={() => setShowAlert(false)} dismissible className="mt-4">
           Mensaje enviado con éxito.
@@ -86,7 +86,7 @@ function ContactPage() {
       )}
           </Form>
         </Col>
-        <Col className="col-12 col-lg-4 contact-custom-background py-4">
+        <Col className="col-12 col-lg-4 section__background section__background--contact py-4">
         </Col>
       </Row>
       <h2 className=" fs-1 pt-4 mt-4">Bebestibles</h2>

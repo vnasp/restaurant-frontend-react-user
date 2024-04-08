@@ -91,7 +91,7 @@ const CartDetail = () => {
                   aria-label="Cupón"
                   aria-describedby="input-for-coupon-discount"
                 />
-                <Button variant="btn primary" id="cupon-button" onClick={handleCoupon}>
+                <Button variant="btn btn--primary" id="cupon-button" onClick={handleCoupon}>
                   Canjear
                 </Button>
               </InputGroup>

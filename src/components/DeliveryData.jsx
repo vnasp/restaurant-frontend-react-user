@@ -67,7 +67,7 @@ const navigate = useNavigate()
           </Form.Select>
         </InputGroup>
       </Form.Group>
-      <Button className="btn secondary w-100 fs-4 mt-4" type="submit">Crear Orden</Button>
+      <Button className="btn btn--secondary w-100 fs-4 mt-4" type="submit">Crear Orden</Button>
     </Form>
   );
 }

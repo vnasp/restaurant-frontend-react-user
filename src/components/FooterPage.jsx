@@ -7,8 +7,8 @@ const FooterPage = () => {
   return (
     <>
       <div className="position-relative mt-4">
-        <div className="skewed-footer"></div>
-        <div id="footer">
+        <div className="footer__skewed"></div>
+        <div className="footer">
           <Row className="flex-column flex-lg-row align-items-start pt-4 m-4 text-center bg-opacity-25">
             <Col className="mt-2 mt-lg-4 pt-4">
               <CallUs />

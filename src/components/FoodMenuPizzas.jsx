@@ -52,7 +52,7 @@ const FoodMenuPizzas = () => {
                 <Card.Body className="d-flex justify-content-between align-items-center">
                   <Card.Text className="fw-bolder fs-2 m-0">{CLP.format(pizza.price)}
                   </Card.Text>
-                  <Button className="btn secondary" onClick={() => addToCart({ id: pizza.id, type: 'pizza' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
+                  <Button className="btn btn--secondary" onClick={() => addToCart({ id: pizza.id, type: 'pizza' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
                 </Card.Body>
               </Card>
             </Col>

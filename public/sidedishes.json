@@ -2,28 +2,28 @@
   {
     "id": 1,
     "name": "Aros de Cebolla",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1_JYeP_z2qb0_iYx-2VA47EQMHcgtUnbx_g&usqp=CAU",
+    "img": "/assets/img/sides/side-aros.webp",
     "desc": "Crujientes aros de cebolla rebozados y fritos lentamente a la perfección.",
     "price": 4990
   },
   {
     "id": 2,
     "name": "Palitos de Ajo",
-    "img": "https://img.freepik.com/premium-photo/food-appetizer-garlic-bread-stick-eco-wood-tray-box-packaging_42124-1911.jpg?w=2000",
+    "img": "/assets/img/sides/side-palitos.webp",
     "desc": "Palitos de pan horneados con ajo y mantequilla, con un toque de queso parmesano.",
     "price": 3990
   },
   {
     "id": 3,
     "name": "Alitas de Pollo Picantes",
-    "img": "https://img.freepik.com/premium-photo/chicken-wings-grilled-baked-chicken-wings-with-sesame-seeds-ketchup-spicy-tomato-sauce-black-plate-old-wooden-blue-table-background-top-view-with-copy-space_253362-25128.jpg",
+    "img": "/assets/img/sides/side-alitas.webp",
     "desc": "Alitas de pollo marinadas y cocidas al horno con nuestra salsa picante especial.",
     "price": 6990
   },
   {
     "id": 4,
     "name": "Patatas Bravas",
-    "img": "https://img.freepik.com/premium-photo/fried-potatoes-table_218381-27879.jpg",
+    "img": "/assets/img/sides/side-patatas.webp",
     "desc": "Patatas asadas al horno, aliñadas con especias y servidas con salsa brava y alioli.",
     "price": 4490
   }

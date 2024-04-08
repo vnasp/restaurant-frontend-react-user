@@ -43,7 +43,7 @@ const handleClickBack = () => {
             </div>
           <Card.Text className="d-flex justify-content-between fw-bolder fs-2 mt-4 pt-4">
             Precio: {CLP.format(pizzas[pizzaIndex].price)}
-            <Button className="btn secondary" type="button" value={pizzas[pizzaIndex].id} onClick={() => addToCart({ id: pizzas[pizzaIndex].id, type: 'pizza' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
+            <Button className="btn btn--secondary" type="button" value={pizzas[pizzaIndex].id} onClick={() => addToCart({ id: pizzas[pizzaIndex].id, type: 'pizza' })}><i className="bi bi-basket pe-2"></i> Agregar</Button>
           </Card.Text>
         </Card.Body>
         <Card.Img variant="top" src={pizzas[pizzaIndex].img} className="pizza-img"/>

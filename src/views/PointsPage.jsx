@@ -11,7 +11,7 @@ const PointsPage = () => {
   <>
     <Container>
     <h1 className="">MammaPuntos</h1>
-      <div className="card-custom custom-shadow custom-margin-bottom">
+      <div className="card-custom custom-shadow mb-5">
         <div className="px-2 px-lg-4 mx-lg-4">
           <h2 className="text-center pt-4 fs-3">¡Sé parte! Prueba más, ahorra más.</h2>
           <div className="py-4">En pizzería Mamma Mia, queremos agradecer a nuestros clientes su lealtad. Por cada compra, acumula MammaPuntos que puedes canjear por deliciosas recompensas.
@@ -35,12 +35,12 @@ const PointsPage = () => {
           <div className="mb-4 text-center">
             ¿Listo para unirte?<br/>
             ¡Haz más con cada bocado! Inscríbete y comienza a acumular MammaPuntos hoy.<br /><br/>
-              <a onClick={handleInscribeClick} className="btn secondary  inactive">
+              <a onClick={handleInscribeClick} className="btn btn--secondary  inactive">
                       <i className="bi bi-person pe-3"></i> Inscríbete
                     </a>
           </div>
         </div>
-        <div className="custom-points-background">
+        <div className="section__background section__background--points">
         </div>
       </div>
       <h2 className=" fs-1 pt-4 mt-4">Pizzas Artesanales</h2>

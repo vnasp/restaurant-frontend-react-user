@@ -18,7 +18,7 @@ const CartEmpty = () => {
           <h2>está vacío</h2>
           <h3 className=" fs-4">¡Falta pizza en tu vida!</h3>
             <Link to="/menu" onClick={handleClick}>
-              <Button className="btn secondary fs-4 my-4"
+              <Button className="btn btn--secondary fs-4 my-4"
               >Pide tu pizza
               </Button>
             </Link>
