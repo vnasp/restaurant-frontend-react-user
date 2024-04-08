@@ -52,9 +52,9 @@ const CartDetail = () => {
             }
           </Col>
           <Col className="col-md-3 p-0 fw-bolder text-center">
-            <Button className="secondary px-1 py-0 me-1" type="button" onClick={() => decrementQty(item.id)}><i className="bi bi-dash"></i></Button>
+            <Button className="btn--secondary px-1 py-0 me-1" type="button" onClick={() => decrementQty(item.id)}><i className="bi bi-dash"></i></Button>
             {item.qty}
-            <Button className="secondary px-1 py-0 ms-1" type="button" onClick={() => incrementQty(item.id)}><i className="bi bi-plus"></i></Button>
+            <Button className="btn--secondary px-1 py-0 ms-1" type="button" onClick={() => incrementQty(item.id)}><i className="bi bi-plus"></i></Button>
           </Col>
         </Row>
       ))}
