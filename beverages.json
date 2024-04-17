@@ -2,28 +2,28 @@
   {
     "id": 1,
     "name": "Agua Mineral",
-    "img": "/restaurant-frontend-react-user/assets/img/beverages/beverage-agua.webp",
+    "img": "/assets/img/beverages/beverage-agua.webp",
     "desc": "Agua mineral natural de vertiente natural, servida fría, con o sin gas.",
     "price": 1990
   },
   {
     "id": 2,
     "name": "Limonada Clásica",
-    "img": "/restaurant-frontend-react-user/assets/img/beverages/beverage-limonada.webp",
+    "img": "/assets/img/beverages/beverage-limonada.webp",
     "desc": "Limonada recién preparada con jugo de limón fresco, azúcar y agua.",
     "price": 3490
   },
   {
     "id": 3,
     "name": "Té Helado",
-    "img": "/restaurant-frontend-react-user/assets/img/beverages/beverage-te.webp",
+    "img": "/assets/img/beverages/beverage-te.webp",
     "desc": "Té negro helado, servido con limón y una cantidad opcional de azúcar.",
     "price": 2490
   },
   {
     "id": 4,
     "name": "Cerveza Artesanal",
-    "img": "/restaurant-frontend-react-user/assets/img/beverages/beverage-cerveza.webp",
+    "img": "/assets/img/beverages/beverage-cerveza.webp",
     "desc": "Cervezas artesanal tipo Lager, servida fria.",
     "price": 4990
   }
